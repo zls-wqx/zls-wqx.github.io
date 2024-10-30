@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X-GORB 安全管家</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="avatar-container">
+                <img src="avatar.png" alt="网站头像" class="avatar">
+            </div>
+            <h1>X-GORB 安全管家</h1>
+            <p>保护您的系统免受病毒和木马的侵害</p>
+        </header>
+        <main>
+            <section class="scan-section">
+                <h2>系统扫描</h2>
+                <p>上传文件进行安全扫描</p>
+                <div class="form-group">
+                    <label for="fileInput" class="custom-file-upload">
+                        选择文件
+                    </label>
+                    <input type="file" id="fileInput">
+                    <button id="scanButton">开始扫描</button>
+                </div>
+                <div id="scanResult" class="hidden">
+                    <h3>扫描结果</h3>
+                    <p id="resultText">扫描中...</p>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 X-GORB Studio. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

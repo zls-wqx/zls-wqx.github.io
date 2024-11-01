@@ -1,0 +1,372 @@
+/* 通用样式 */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+    text-align: center;
+}
+
+img {
+    max-width: 100%; /* 使图片自适应屏幕大小 */
+    height: auto; /* 保持纵横比 */
+}
+
+nav {
+    background: linear-gradient(135deg, #0078d4 0%, #005a9e 100%); /* Microsoft 蓝 */
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav .nav-links li {
+    margin-left: 15px;
+}
+
+nav .nav-links li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav .nav-links li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+/* 当前页面的导航链接样式 */
+nav .nav-links li a.active {
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* 页面主内容 */
+section {
+    padding: 20px;
+    max-width: 100%;
+    margin: auto;
+}
+
+h1 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #005a9e; /* 深蓝 */
+    padding-bottom: 10px;
+}
+
+.custom-background {
+    background-image: url('background.jpg'); /* 替换为你的图片链接 */
+    background-size: cover; /* 使背景图片覆盖整个页面 */
+    background-repeat: no-repeat; /* 防止图片重复 */
+    background-position: center; /* 背景图片居中显示 */
+    background-attachment: fixed; /* 使背景固定，滚动时不移动 */
+}
+
+/* 关于我们 */
+.team {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.team-member {
+    text-align: center;
+    flex: 1 1 45%;
+    margin: 10px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid #0078d4; /* Microsoft 蓝 */
+    margin-bottom: 10px;
+}
+
+.button {
+    background-color: #28A745; /* 按钮背景颜色 */
+    color: white; /* 按钮文字颜色 */
+    border: none; /* 无边框 */
+    padding: 10px 20px; /* 内边距 */
+    text-align: center; /* 文本居中 */
+    text-decoration: none; /* 去掉下划线 */
+    display: inline-block; /* 让按钮水平排列 */
+    font-size: 16px; /* 字体大小 */
+    margin: 4px 2px; /* 外边距 */
+    cursor: pointer; /* 鼠标悬停时变为手指 */
+    border-radius: 5px; /* 圆角 */
+    transition: background-color 0.3s; /* 过渡效果 */
+}
+
+.button:hover {
+    background-color: #218838; /* 鼠标悬停时的背景颜色 */
+}
+
+/* 服务项目 */
+.service-item {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* 产品与项目展示 */
+.project-item {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.project-item a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #0078d4; /* Microsoft 蓝 */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.project-item a:hover {
+    color: #005a9e; /* 深蓝 */
+}
+
+/* 新闻与更新 */
+.news-item {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.news-item a {
+    color: #0078d4; /* Microsoft 蓝 */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.news-item a:hover {
+    color: #005a9e; /* 深蓝 */
+}
+
+/* 客户反馈与评价 */
+.feedback-item {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* 联系我们 */
+.contact-section {
+    margin-top: 20px;
+}
+
+.contact-section .map {
+    margin-top: 20px;
+    width: 100%;
+    height: 300px;
+    background-color: #e0e0e0;
+    border-radius: 12px;
+}
+
+/* 登录 */
+.login-section {
+    max-width: 380px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.login-section h1 {
+    text-align: center;
+    color: #333;
+}
+
+.login-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-section label {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.login-section input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.login-section button {
+    padding: 12px;
+    background-color: #0078d4; /* Microsoft 蓝 */
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.login-section button:hover {
+    background-color: #005a9e; /* 深蓝 */
+}
+
+.login-section p {
+    text-align: center;
+}
+
+/* 注册页面 */
+.register-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.register-form-container {
+    max-width: 360px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.register-section h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.register-form-container label {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.register-form-container input {
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    width: 100%;
+}
+
+.register-form-container button {
+    padding: 12px;
+    background-color: #0078d4; /* Microsoft 蓝 */
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.register-form-container button:hover {
+    background-color: #005a9e; /* 深蓝 */
+}
+
+.register-form-container p {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.register-form-container p a {
+    color: #0078d4; /* Microsoft 蓝 */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.register-form-container p a:hover {
+    color: #005a9e; /* 深蓝 */
+}
+
+/* 页脚 */
+footer {
+    background: #0078d4; /* Microsoft 蓝 */
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav .nav-links {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    nav .nav-links li {
+        margin: 5px 0;
+    }
+
+    .team {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-member {
+        flex: 1 1 100%; /* 让团队成员在小屏幕上占满整行 */
+        max-width: 90%; /* 限制最大宽度 */
+    }
+
+    .login-section, .register-section {
+        max-width: 90%; /* 限制宽度 */
+    }
+
+    footer {
+        font-size: 14px; /* 调整页脚字体大小 */
+    }
+}
+

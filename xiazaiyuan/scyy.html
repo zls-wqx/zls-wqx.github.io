@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X-GORB - 上传软件</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>上传软件</h1>
+    </header>
+
+    <main>
+        <section id="upload">
+            <h2>上传新的软件</h2>
+            <form action="upload.php" method="post" enctype="multipart/form-data">
+                <label for="software-name">软件名称:</label><br>
+                <input type="text" id="software-name" name="software-name" required><br><br>
+
+                <label for="software-description">软件描述:</label><br>
+                <textarea id="software-description" name="software-description" rows="4" cols="50" required></textarea><br><br>
+
+                <label for="software-file">选择软件文件:</label><br>
+                <input type="file" id="software-file" name="software-file" accept=".exe,.zip,.rar,.7z,.tar" required><br><br>
+
+                <input type="submit" value="上传">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 X-GORB Studio. All rights reserved.</p>
+    </footer>
+</body>
+</html>

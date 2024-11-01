@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X-GORB软件下载园</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>X-GORB软件下载园</h1>
+        <nav>
+            <ul>
+                <li><a href="index.php">首页</a></li>
+                <li><a href="downloads.html">软件下载</a></li>
+                <li><a href="about.html">关于我们</a></li>
+                <li><a href="contact.html">联系我们</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>最新上传的软件</h2>
+            <?php
+            // 读取上传的文件信息并展示
+            $file = fopen("uploads/uploads.txt", "r");
+            if ($file) {
+                while (($line = fgets($file)) !== false) {
+                    list($name, $description, $filename) = explode("|", trim($line));
+                    echo "<div class='download-item'>";
+                    echo "<h3>$name</h3>";
+                    echo "<p>$description</p>";
+                    echo "<a href='uploads/$filename' download>下载</a>";
+                    echo "</div>";
+                }
+                fclose($file);
+            } else {
+                echo "没有可显示的软件。";
+            }
+            ?>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 X-GORB Studio. All rights reserved.</p>
+    </footer>
+</body>
+</html>

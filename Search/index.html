@@ -13,13 +13,40 @@
         <div class="results" id="results"></div>
         <div class="pagination" id="pagination"></div>
     </div>
+		<style>       
+.icp-container {
+            display: flex;
+            align-items: center;
+            justify-content: center; /* 水平居中 */
+            font-size: 16px; /* 默认字体大小 */
+            margin-top: 50px; /* 可以根据需要调整上下边距 */
+        }
+        .icp-container img {
+            width: 1em; /* 图片宽度与字体大小一致 */
+            height: auto;
+            margin-right: 0.5em; /* 图片和文字之间的间距 */
+        }
+        .icp-container a {
+            color: black;
+            text-decoration: none;
+            font-size: 1em; /* 文字大小与默认字体大小一致 */
+        }
+        @media (max-width: 600px) {
+            .icp-container {
+                font-size: 14px; /* 在小屏幕上减小字体大小 */
+            }
+        }
+    </style>
 		<form target="_blank" method="get" action="https://www.baidu.com/s">
 			<input type="text" placeholder="请输入关键词" name="word" class="text" />
 			<input type="submit" value="搜索" class="search">
 		</form>
         <footer>
         <p>&copy; 2024 X-GORB-Studio Search. All rights reserved.</p>
-        <p><a href="#">Privacy Policy</a> | <a href="https://zls-wqx.github.io/X-GORB-STUDIO/services.html">Terms of Service</a> | <a href="https://zls-wqx.github.io/X-GORB-STUDIO/contact.html">Contact Us</a></p><p><a href="https://icp.gov.moe/?keyword=20249013" target="_blank">萌ICP备20249013号</a></p>
+        <p><a href="#">Privacy Policy</a> | <a href="https://zls-wqx.github.io/X-GORB-STUDIO/services.html">Terms of Service</a> | <a href="https://zls-wqx.github.io/X-GORB-STUDIO/contact.html">Contact Us</a></p> 
+        <div class="icp-container">
+        <img src="https://moe.blog/content/uploadfile/Links/icp.gov.moe.png" alt="ICP图标">
+        <a href="https://icp.gov.moe/?keyword=20249013" target="_blank">萌ICP备20249013号</a>	</div> 
     </footer>
 
     <script src="script.js"></script>

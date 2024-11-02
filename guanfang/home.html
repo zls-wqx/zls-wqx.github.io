@@ -7,6 +7,31 @@
     <link rel="stylesheet" href="styles.css">
     <script src="app.js" defer></script>
 </head>
+<style>       
+.icp-container {
+            display: flex;
+            align-items: center;
+            justify-content: center; /* 水平居中 */
+            font-size: 16px; /* 默认字体大小 */
+            margin-top: 50px; /* 可以根据需要调整上下边距 */
+        }
+        .icp-container img {
+            width: 1em; /* 图片宽度与字体大小一致 */
+            height: auto;
+            margin-right: 0.5em; /* 图片和文字之间的间距 */
+        }
+        .icp-container a {
+            color: black;
+            text-decoration: none;
+            font-size: 1em; /* 文字大小与默认字体大小一致 */
+        }
+        @media (max-width: 600px) {
+            .icp-container {
+                font-size: 14px; /* 在小屏幕上减小字体大小 */
+            }
+        }
+    </style>
+
 <body>
     <header>
         <h1>X-GORB 官方网站</h1>
@@ -58,7 +83,9 @@
         <p>©2024 -X-GORB工作室版权所有 · Copyright © 2024 X-GORB. All rights reserved.</p>
         <p>注意！本网站没有备案，请注意辨别！（但是我们的网站是美国旧金山服务器）</p>
         <p>不就是打输了，别这么垂头丧气。我们是妖精的尾巴，永不停歇的公会。只要活着就要勇往直前的奔跑去。</p>
-        <p><a href="https://icp.gov.moe/?keyword=20249013" target="_blank">萌ICP备20249013号</a></p>
+        <div class="icp-container">
+        <img src="https://moe.blog/content/uploadfile/Links/icp.gov.moe.png" alt="ICP图标">
+        <a href="https://icp.gov.moe/?keyword=20249013" target="_blank">萌ICP备20249013号</a>	</div>
     </footer>
 </body>
 </html>

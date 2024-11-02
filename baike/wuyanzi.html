@@ -4,8 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>吴延梓 - X百科</title>
+    <title>吴延梓 - X-GORB Studio百科官方网站</title>
 </head>
+    <style>       
+.icp-container {
+            display: flex;
+            align-items: center;
+            justify-content: center; /* 水平居中 */
+            font-size: 16px; /* 默认字体大小 */
+            margin-top: 50px; /* 可以根据需要调整上下边距 */
+        }
+        .icp-container img {
+            width: 1em; /* 图片宽度与字体大小一致 */
+            height: auto;
+            margin-right: 0.5em; /* 图片和文字之间的间距 */
+        }
+        .icp-container a {
+            color: black;
+            text-decoration: none;
+            font-size: 1em; /* 文字大小与默认字体大小一致 */
+        }
+        @media (max-width: 600px) {
+            .icp-container {
+                font-size: 14px; /* 在小屏幕上减小字体大小 */
+            }
+        }
+    </style>
 <body>
     <body class="custom-background">
     <header>
@@ -41,7 +65,9 @@
     </main>
     <footer>
         <p>© 2024 X百科. 保留所有权利.</p>
-        <p><a href="https://icp.gov.moe/?keyword=20249013" target="_blank">萌ICP备20249013号</a></p>
+        <div class="icp-container">
+        <img src="https://moe.blog/content/uploadfile/Links/icp.gov.moe.png" alt="ICP图标">
+        <a href="https://icp.gov.moe/?keyword=20249013" target="_blank">萌ICP备20249013号</a>	</div>
     </footer>
 </body>
 </html>

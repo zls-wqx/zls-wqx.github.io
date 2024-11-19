@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name='description' content='X-GORB IP查询 中文官方网站 - 简洁、时尚、科技、探索无限可能'>
+    <title>IP查询 - X-GORB IP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
+        input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+        .error {
+            color: red;
+        }
+        #logo {
+            height: 40px;
+            margin-right: 20px;
+        }
+        #query {
+            width: 50%;
+            max-width: 600px;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            position: relative;
+            bottom: 0;
+        }
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+
+    </style>
+</head>
+<body>
+        <img id="logo" src="logo.png" alt="Logo">
+<div class="container">
+    <h1>IP查询</h1>
+    <input type="text" id="ipInput" placeholder="输入IP地址">
+    <button onclick="lookupIP()">查询</button>
+    <div id="ipResult" class="result"></div>
+
+    <h2>域名查询</h2>
+    <input type="text" id="domainInput" placeholder="输入域名">
+    <button onclick="lookupDomain()">查询</button>
+    <div id="domainResult" class="result"></div>
+
+    <h2>个人IP查询</h2>
+    <button onclick="lookupMyIP()">查询我的IP</button>
+    <div id="myIpResult" class="result"></div>
+</div>
+    <footer>
+        <p>© 2024 X-GORB Studio. All rights reserved.</p>
+        <p>联系我们: xgorb@xgorb.cn</p>
+        <p>X-GORB IP查询网</p>
+    </footer>
+<script>
+    async function lookupIP() {
+        const ip = document.getElementById('ipInput').value.trim();
+        if (!ip) {
+            document.getElementById('ipResult').innerHTML = '<p class="error">请输入有效的IP地址</p>';
+            return;
+        }
+        try {
+            const response = await fetch(`https://ipinfo.io/${ip}/json`);
+            if (!response.ok) throw new Error('无效的IP地址或请求失败');
+            const data = await response.json();
+            displayResult(data, 'ipResult');
+        } catch (error) {
+            console.error('Error fetching IP info:', error);
+            document.getElementById('ipResult').innerHTML = `<p class="error">${error.message}</p>`;
+        }
+    }
+
+    async function lookupDomain() {
+        const domain = document.getElementById('domainInput').value.trim();
+        if (!domain) {
+            document.getElementById('domainResult').innerHTML = '<p class="error">请输入有效的域名</p>';
+            return;
+        }
+        try {
+            // Resolve the domain to an IP address using api.ipify.org
+            const dnsResponse = await fetch(`https://api.ipify.org?format=json&domain=${domain}`);
+            if (!dnsResponse.ok) throw new Error('无法解析域名');
+            const dnsData = await dnsResponse.json();
+            const ipAddress = dnsData.ip;
+
+            // Get the IP info using ipinfo.io
+            const ipInfoResponse = await fetch(`https://ipinfo.io/${ipAddress}/json`);
+            if (!ipInfoResponse.ok) throw new Error('无法获取IP信息');
+            const ipInfoData = await ipInfoResponse.json();
+            displayResult(ipInfoData, 'domainResult');
+        } catch (error) {
+            console.error('Error fetching domain info:', error);
+            document.getElementById('domainResult').innerHTML = `<p class="error">${error.message}</p>`;
+        }
+    }
+
+    async function lookupMyIP() {
+        try {
+            const response = await fetch('https://ipinfo.io/json');
+            if (!response.ok) throw new Error('无法获取您的IP信息');
+            const data = await response.json();
+            displayResult(data, 'myIpResult');
+        } catch (error) {
+            console.error('Error fetching your IP info:', error);
+            document.getElementById('myIpResult').innerHTML = `<p class="error">${error.message}</p>`;
+        }
+    }
+
+    function displayResult(data, elementId) {
+        const resultElement = document.getElementById(elementId);
+        resultElement.innerHTML = `
+            <p><strong>IP 地址:</strong> ${data.ip || '未知'}</p>
+            <p><strong>国家:</strong> ${data.country ? getCountryName(data.country) : '未知'}</p>
+            <p><strong>城市:</strong> ${data.city || '未知'}</p>
+            <p><strong>组织:</strong> ${data.org || '未知'}</p>
+        `;
+    }
+
+    // 简单的国家代码到名称映射示例
+    function getCountryName(code) {
+        const countryNames = {
+            CN: '中国',
+            US: '美国',
+            GB: '英国',
+            DE: '德国',
+            FR: '法国',
+            JP: '日本',
+            IN: '印度',
+            BR: '巴西',
+            CA: '加拿大',
+            AU: '澳大利亚'
+            // 可以继续添加更多国家代码和名称
+        };
+        return countryNames[code] || code;
+    }
+</script>
+</body>
+</html>
+
+
+

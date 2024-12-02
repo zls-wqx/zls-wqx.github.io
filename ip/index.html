@@ -6,6 +6,52 @@
     <link rel="shortcut icon" href="favicon.ico">
     <meta name='description' content='X-GORB IP查询 中文官方网站 - 简洁、时尚、科技、探索无限可能'>
     <title>IP查询 - X-GORB IP</title>
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #popup {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            z-index: 1000;
+            display: none; /* Initially hidden */
+            max-width: 300px;
+            width: 90%;
+        }
+        #popup h3 {
+            margin-top: 0;
+            color: #333333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #popup .ad-label {
+            font-size: 0.8em;
+            color: #ff9900;
+            font-weight: bold;
+        }
+        #popup p {
+            color: #666666;
+        }
+        #popup button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+        #popup button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -86,11 +132,30 @@
     <button onclick="lookupMyIP()">查询我的IP</button>
     <div id="myIpResult" class="result"></div>
 </div>
+    <div id="popup">
+    <h3>赞助广告 <span class="ad-label">广告</span></h3>
+    <p>欢迎来到广河，甘肃省广河县“燕麦王甜醅”广河总店，这里有很多糖葫芦，1米糖葫芦等等！</p>
+    <button onclick="closePopup()">关闭</button>
+    <a target=_blank href="https://qq.xgorb.cn">加入Q群了解更多:985565412</a>
+</div>
     <footer>
         <p>© 2024 X-GORB Studio. All rights reserved.</p>
         <p>联系我们: xgorb@xgorb.cn</p>
         <p>X-GORB IP查询网</p>
     </footer>
+    <script>
+    function showPopup() {
+        document.getElementById('popup').style.display = 'block';
+    }
+
+    function closePopup() {
+        document.getElementById('popup').style.display = 'none';
+    }
+
+    // Show the popup when the page loads
+    window.onload = showPopup;
+</script>
+
 <script>
     async function lookupIP() {
         const ip = document.getElementById('ipInput').value.trim();

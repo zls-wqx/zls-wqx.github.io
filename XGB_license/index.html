@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="https://xgorb.cn/ico.ico">
+    <title>X-GORB Studio开源许可证 (XGB)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, color 0.3s;
+        }
+        h1 {
+            text-align: center;
+            color: #007bff;
+        }
+        pre {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            white-space: pre-wrap;       /* Since CSS3 */
+            white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+            white-space: -pre-wrap;      /* Opera 4-6 */
+            white-space: -o-pre-wrap;    /* Opera 7 */
+            word-wrap: break-word;       /* Internet Explorer 5.5+ */
+        }
+        p {
+            line-height: 1.6;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #666;
+        }
+        .toggle-button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .toggle-button:hover {
+            background-color: #0056b3;
+        }
+        .dark-mode body {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+        .dark-mode .header {
+            background-color: #1e1e1e;
+            box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+        }
+        .dark-mode .container {
+            background-color: #1e1e1e;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        }
+        .dark-mode h1 {
+            color: #bb86fc;
+        }
+        .dark-mode a {
+            color: #bb86fc;
+        }
+        .dark-mode footer {
+            color: #9e9e9e;
+        }
+        .dark-mode pre {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 id="license-title">X-GORB Studio开源许可证 (XGB)</h1>
+        <div>
+            <button class="toggle-button" onclick="toggleDarkMode()">深色/亮色</button>
+            <button class="toggle-button" onclick="toggleLanguage()">中文/EN</button>
+        </div>
+    </div>
+    <div class="container">
+        <p id="copyright"></p>
+        
+        <pre id="license-text">
+X-GORB Studio开源许可证 (XGB)
+
+特此免费授予任何获得本软件及其相关文档文件（以下简称“软件”）副本的人不受限制地使用、复制、修改、合并、发布、分发、转许可和/或销售软件副本，并允许向获得软件的人进行同样的操作，但须遵守以下条件：
+
+1. 许可授予
+   1.1 授权人在此授予您一个全球性的、不可撤销的、非排他性的许可，允许您为任何目的复制、分发、修改、合并、发布、传播本软件及其衍生作品。
+
+2. 版权声明
+   上述版权通知和本许可声明应包含在软件的所有副本或重要部分中。
+
+3. 著作权声明
+   您必须保留并显示原始版权声明、软件名称以及完整的许可证文本。
+
+4. 修改与派生作品
+   如果您对软件进行了修改或创作了派生作品，则您必须在这些修改或派生作品中明确标注出您的贡献，并且这些修改或派生作品也必须遵循相同的 XGB 许可证。
+
+5. 商业用途
+   您可以将本软件用于商业用途，无需支付额外费用。
+
+6. 免责声明
+   本软件按“现状”提供，没有任何明示或暗示的担保，包括但不限于适销性、特定用途适用性和不侵权的担保。在任何情况下，授权人均不对因使用本软件而产生的损害负责，无论是合同责任、侵权责任或其他形式的责任。
+
+7. 终止
+   如果您违反了本许可证中的任何条款，则本许可证将自动终止。
+
+8. 法律适用及争议解决
+   本许可证受中华人民共和国法律管辖，并根据其进行解释。因本许可证引起的任何争议应提交至中国北京市海淀区人民法院诉讼解决。
+
+9. 版本更新
+   授权人保留随时更改本许可证的权利。新的许可证版本将在网站 https://xgorb.cn/XGB_license 上公布。建议定期查看最新版本。
+
+10. 第三方知识产权
+    您理解并同意，在使用本软件的过程中，您可能需要遵守第三方知识产权权利人的规定。
+
+11. 隐私政策
+    使用本软件时，您还应遵守 X-GORB Studio 的隐私政策，该政策可以在 https://xgorb.cn/privacy-policy 查看。
+
+12. 联系方式
+    如有任何问题或疑虑，请通过电子邮件 contact@xgorb.cn 联系我们。
+        </pre>
+
+        <footer>
+            版权所有 © 2024 X-GORB Studio
+        </footer>
+    </div>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+
+        function toggleLanguage() {
+            const isZh = document.getElementById('license-title').innerText.includes('X-GORB Studio开源许可证');
+
+            if (isZh) {
+                document.getElementById('license-title').innerText = 'X-GORB Studio Open Source License (XGB)';
+                document.getElementById('copyright').innerText = '';
+                document.getElementById('license-text').innerText = `
+X-GORB Studio Open Source License (XGB)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+1. Grant of License
+   1.1 The Licensor hereby grants you a worldwide, irrevocable, non-exclusive license to reproduce, distribute, modify, merge, publish, transmit this Software and its derivative works for any purpose.
+
+2. Copyright Notice
+   Copyright (c) 2024 X-GORB Studio and this permission notice shall be included in all
+   copies or substantial portions of the Software.
+
+3. Statement of Copyright
+   You must retain and display the original copyright notice, the name of the Software, and the complete text of the license.
+
+4. Modifications and Derivative Works
+   If you make modifications to the Software or create derivative works based on it, you must clearly indicate your contribution within these modifications or derivative works, and such modifications or derivative works must also comply with the same XGB License.
+
+5. Commercial Use
+   You may use this Software for commercial purposes without paying additional fees.
+
+6. Disclaimer of Warranty
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+   AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+   SOFTWARE.
+
+7. Termination
+   Should you breach any term of this License, this License will terminate automatically.
+
+8. Governing Law and Dispute Resolution
+   This License shall be governed by and construed in accordance with the laws of the People's Republic of China.
+   Any disputes arising out of or in connection with this License shall be submitted to the competent court at Haidian District, Beijing City for resolution.
+
+9. Version Updates
+   The Licensor reserves the right to update and revise this License from time to time. New versions will be posted on the website https://xgorb.cn/XGB_license. You are advised to check the latest version regularly.
+
+10. Third-Party Intellectual Property Rights
+    You understand and agree that during the use of this Software, you may need to comply with the provisions of third-party intellectual property right holders.
+
+11. Privacy Policy
+    When using this Software, you should also comply with X-GORB Studio's Privacy Policy, which can be viewed at https://xgorb.cn/privacy-policy.
+
+12. Contact Information
+    For any questions or concerns, please contact us via email at contact@xgorb.cn.`;
+            } else {
+                document.getElementById('license-title').innerText = 'X-GORB Studio开源许可证 (XGB)';
+                document.getElementById('copyright').innerText = '版权所有 © 2024 X-GORB Studio';
+                document.getElementById('license-text').innerText = `
+版权所有 © 2024 X-GORB Studio
+
+特此免费授予任何获得本软件及其相关文档文件（以下简称“软件”）副本的人不受限制地使用、复制、修改、合并、发布、分发、转许可和/或销售软件副本，并允许向获得软件的人进行同样的操作，但须遵守以下条件：
+
+1. 许可授予
+   1.1 授权人在此授予您一个全球性的、不可撤销的、非排他性的许可，允许您为任何目的复制、分发、修改、合并、发布、传播本软件及其衍生作品。
+
+2. 版权声明
+   上述版权通知和本许可声明应包含在软件的所有副本或重要部分中。
+
+3. 著作权声明
+   您必须保留并显示原始版权声明、软件名称以及完整的许可证文本。
+
+4. 修改与派生作品
+   如果您对软件进行了修改或创作了派生作品，则您必须在这些修改或派生作品中明确标注出您的贡献，并且这些修改或派生作品也必须遵循相同的 XGB 许可证。
+
+5. 商业用途
+   您可以将本软件用于商业用途，无需支付额外费用。
+
+6. 免责声明
+   本软件按“现状”提供，没有任何明示或暗示的担保，包括但不限于适销性、特定用途适用性和不侵权的担保。在任何情况下，授权人均不对因使用本软件而产生的损害负责，无论是合同责任、侵权责任或其他形式的责任。
+
+7. 终止
+   如果您违反了本许可证中的任何条款，则本许可证将自动终止。
+
+8. 法律适用及争议解决
+   本许可证受中华人民共和国法律管辖，并根据其进行解释。因本许可证引起的任何争议应提交至中国北京市海淀区人民法院诉讼解决。
+
+9. 版本更新
+   授权人保留随时更改本许可证的权利。新的许可证版本将在网站 https://xgorb.cn/XGB_license 上公布。建议定期查看最新版本。
+
+10. 第三方知识产权
+    您理解并同意，在使用本软件的过程中，您可能需要遵守第三方知识产权权利人的规定。
+
+11. 隐私政策
+    使用本软件时，您还应遵守 X-GORB Studio 的隐私政策，该政策可以在 https://xgorb.cn/privacy-policy 查看。
+
+12. 联系方式
+    如有任何问题或疑虑，请通过电子邮件 contact@xgorb.cn 联系我们。`;
+            }
+        }
+
+        // Check local storage for dark mode preference
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            document.body.classList.add('dark-mode');
+        }
+
+        // Save dark mode preference to local storage
+        document.querySelector('.toggle-button').addEventListener('click', () => {
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+
+        // Check local storage for language preference
+        if (localStorage.getItem('language') === 'en') {
+            toggleLanguage();
+        }
+
+        // Save language preference to local storage
+        document.querySelectorAll('.toggle-button')[1].addEventListener('click', () => {
+            if (document.getElementById('license-title').innerText.includes('X-GORB Studio开源许可证')) {
+                localStorage.setItem('language', 'en');
+            } else {
+                localStorage.setItem('language', 'zh');
+            }
+        });
+    </script>
+</body>
+</html>

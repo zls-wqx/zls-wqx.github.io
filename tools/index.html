@@ -552,7 +552,12 @@
     </script>
     <script src="script.js"></script>
     <script src="https://xgorb.cn/china.js"></script>
-        <script>
+<script>
+    function acceptCookies() {
+        document.getElementById('cookieConsent').classList.remove('show');
+        // 这里可以添加保存用户偏好的代码，例如在cookie或localStorage中存储
+    }
+
     window.onload = function() {
         setTimeout(function() {
             document.getElementById('cookieConsent').classList.add('show');

@@ -563,6 +563,57 @@
       </div>
     </div>
     <div class="page" data-immersive-translate-walked="afbe989d-d06f-4686-9588-3a5a55ed0aa4">
+            <style>
+        .cookie-consent {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #f5f5f5;
+            color: #333;
+            text-align: center;
+            padding: 15px 0;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+            transform: translateY(100%);
+            transition: transform 0.3s ease-in-out;
+            z-index: 9999;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .cookie-consent.show {
+            transform: translateY(0);
+        }
+        .cookie-consent p {
+            margin: 0;
+            padding-right: 20px;
+        }
+        .cookie-consent a {
+            color: #0078d4;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .cookie-consent a:hover {
+            color: #005a9e;
+        }
+        .cookie-consent button {
+            background-color: #0078d4;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        .cookie-consent button:hover {
+            background-color: #005a9e;
+        }
+    </style>
       <!-- Page Header-->
       <header class="section page-header" data-immersive-translate-walked="afbe989d-d06f-4686-9588-3a5a55ed0aa4">
         <!-- RD Navbar-->
@@ -680,6 +731,10 @@
         </div>
       </header>
       <!-- Swiper-->
+        <div class="cookie-consent" id="cookieConsent">
+    <p>本网站使用Cookie以确保您获得最佳体验。请阅读<a href="https://xgorb.cn/cookie-policy.html" target="_blank">X-GORB Studio cookie协议</a>。</p>
+    <button onclick="acceptCookies()">接受</button>
+</div>
       <section class="section swiper-container swiper-slider swiper-slider-1 bg-gray-10" data-loop="true" data-immersive-translate-walked="afbe989d-d06f-4686-9588-3a5a55ed0aa4">
         <div class="swiper-bg-box" data-immersive-translate-walked="afbe989d-d06f-4686-9588-3a5a55ed0aa4"></div>
         <div class="swiper-bg-line" data-immersive-translate-walked="afbe989d-d06f-4686-9588-3a5a55ed0aa4"></div>
@@ -1149,5 +1204,12 @@
     <div class="snackbars" id="form-output-global" data-immersive-translate-walked="afbe989d-d06f-4686-9588-3a5a55ed0aa4"></div>
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
+    <script>
+    window.onload = function() {
+        setTimeout(function() {
+            document.getElementById('cookieConsent').classList.add('show');
+        }, 2000); // 页面加载后2秒显示弹窗
+    };
+</script>
   
 </body></html>

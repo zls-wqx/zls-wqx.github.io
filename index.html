@@ -1204,7 +1204,12 @@
     <div class="snackbars" id="form-output-global" data-immersive-translate-walked="afbe989d-d06f-4686-9588-3a5a55ed0aa4"></div>
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
-    <script>
+<script>
+    function acceptCookies() {
+        document.getElementById('cookieConsent').classList.remove('show');
+        // 这里可以添加保存用户偏好的代码，例如在cookie或localStorage中存储
+    }
+
     window.onload = function() {
         setTimeout(function() {
             document.getElementById('cookieConsent').classList.add('show');

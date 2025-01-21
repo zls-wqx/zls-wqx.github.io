@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>사이트 배경 음악 제어</title>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            max-width: 600px;
+        }
+        .warning-icon {
+            width: 50px;
+            height: 50px;
+            background-image: url('warning-icon.png');
+            background-size: cover;
+            float: left;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        .message {
+            color: #333;
+        }
+           .button:hover {
+            background-color: #bfbfbf;
+        }
+
+        .audio-control:hover {
+            background-color: #45a049;
+        }
+
+        .audio-control:active {
+            background-color: #3e8e41;
+        }
+
+        /* 隐藏原生音频控件 */
+        audio {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 控制音频播放/暂停的按钮 -->
+<body>
+    <div class="container">
+        <div class="warning-icon"></div>
+        <h1>접속할 수 없음.</h1>
+        <p class="message">xgorb.cn 에서 봉사기와 접속할 수 없습니다.</p>
+        <ul>
+            <li>봉사기가 일시적으로 사용할 수 없거나 또는 너무 많은 접속중인 상태일수 있습니다. 잠시후에 다시 시도해보십시오.</li>
+            <li>어떤 페이지도 열 수 없다면 컴퓨터의 망접속을 확인해보시기 바랍니다.</li>
+            <li>이 컴퓨터가 만약 방화벽 또는 대리봉사기로 보호되어있다면 내나라열람기가 웹브에 접속할 수 있도록 허용되어있는지 확인해 주시기 바랍니다.</li>
+        </ul>
+        <button class="button">다시 시작</button>
+    <button class="audio-control" onclick="toggleAudio()">将军！</button>
+    </div>
+</body>
+    <!-- 背景音乐 -->
+    <audio id="background-music" autoplay loop>
+        <source src="xgorb.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+<script>
+        function toggleAudio() {
+            var audio = document.getElementById('background-music');
+            var button = document.querySelector('.audio-control');
+
+            if (audio.paused || audio.ended) {
+                // 尝试播放音频
+                audio.play().then(function() {
+                    // 成功播放后更新按钮文本
+                    button.textContent = "음악 중지";
+                }).catch(function(error) {
+                    // 如果被阻止播放，则给出提示
+                    console.log("自动播放被阻止，请手动播放或与页面互动后播放。");
+                    button.textContent = "음악 재생"; // 保持初始文本
+                });
+            } else {
+                // 暂停音频并更新按钮文本
+                audio.pause();
+                button.textContent = "음악 재생";
+            }
+        }
+
+        // 页面加载时尝试自动播放音频
+        window.onload = function() {
+            var audio = document.getElementById('background-music');
+            audio.play().catch(function(error) {
+                // 自动播放被阻止时不做处理，等待用户交互
+            });
+        };
+    </script>
+
+</body>
+</html>

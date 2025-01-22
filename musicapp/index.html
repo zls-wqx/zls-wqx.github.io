@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X-GORB Music</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="favicon.ico">
+    <style>
+        /* Reset some default browser styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .banner {
+            background-color: #ffcc00;
+            color: #000;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        .banner p {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 20px;
+            font-weight: bold;
+        }
+
+        .btn-banner {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-banner:hover {
+            background-color: #0056b3;
+        }
+
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px 0;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 2em;
+            color: #007bff;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin-left: 20px;
+        }
+
+        header nav ul li a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #007bff;
+        }
+
+        .hero {
+            background-image: url('https://img.alicdn.com/tfs/TB1YHctXhv1gK0jSZFFXXb0sXXa-1920-1080.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 150px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ffcc00;
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #e6b800;
+        }
+
+        .btn.disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        .features {
+            padding: 60px 0;
+            background-color: #ffffff;
+        }
+
+        .features h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2em;
+            color: #333;
+        }
+
+        .feature-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .feature-item {
+            width: 30%;
+            min-width: 250px;
+            text-align: center;
+            margin-bottom: 40px;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-item img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+        }
+
+        .feature-item h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #007bff;
+        }
+
+        .feature-item p {
+            color: #555;
+        }
+
+        .download {
+            padding: 60px 0;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+
+        .download h2 {
+            margin-bottom: 20px;
+            font-size: 2em;
+            color: #333;
+        }
+
+        .download p {
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .platform-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .platform-button {
+            text-align: center;
+        }
+
+        .status {
+            display: block;
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #888;
+        }
+
+        .about {
+            padding: 60px 0;
+            background-color: #ffffff;
+        }
+
+        .about h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2em;
+            color: #333;
+        }
+
+        .about p {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        footer {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Mobile Menu Styles */
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 2em;
+        }
+
+        @media (max-width: 768px) {
+            header nav ul {
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background-color: #ffffff;
+                padding: 1rem;
+                display: none;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+            header nav ul.active {
+                display: block;
+            }
+            header nav ul li {
+                margin: 10px 0;
+            }
+            .menu-toggle {
+                display: block;
+            }
+
+            header h1 {
+                font-size: 1.5em;
+            }
+
+            .hero {
+                padding: 100px 0;
+            }
+
+            .hero h2 {
+                font-size: 2em;
+            }
+
+            .hero p {
+                font-size: 1em;
+            }
+
+            .feature-item {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .platform-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .banner p {
+                font-size: 0.9em;
+            }
+
+            .hero h2 {
+                font-size: 1.8em;
+            }
+
+            .hero p {
+                font-size: 0.9em;
+            }
+
+            .feature-item h3 {
+                font-size: 1.2em;
+            }
+
+            .feature-item p {
+                font-size: 0.9em;
+            }
+
+            .download h2 {
+                font-size: 1.8em;
+            }
+
+            .download p {
+                font-size: 0.9em;
+            }
+
+            .about h2 {
+                font-size: 1.8em;
+            }
+
+            .about p {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+    <style>
+        .github-icon {
+            width: 32px;
+            height: 32px;
+            margin-left: auto;
+            cursor: pointer;
+        }
+        .nav-item {
+            margin-left: auto;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- Banner -->
+    <div class="banner">
+        <div class="container">
+            <p>🎉 我们已经制作并发布了我们软件（X-GORB Music v1.0）的新版本！下载以获取更多功能和改进。</p>
+            <a href="#download" class="btn-banner">立即下载</a>
+        </div>
+    </div>
+
+    <header>
+        <div class="container">
+            <h1>X-GORB Music</h1>
+            <button class="menu-toggle">&#9776;</button>
+            <nav>
+                <ul id="mobile-menu">
+                    <li><a href="#home">首页</a></li>
+                    <li><a href="#features">功能</a></li>
+                    <li><a href="#download">下载</a></li>
+                    <li><a href="#about">关于我们</a></li>
+                    <li><a href="https://xgorb.cn">官方网站</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>强大的音乐播放器</h2>
+            <p>享受无与伦比的音乐体验</p>
+            <a href="#download" class="btn">立即下载</a>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2>主要功能</h2>
+            <div class="feature-list">
+                <div class="feature-item">
+                    <img src="1.png" alt="Feature 1">
+                    <h3>多种音频格式支持</h3>
+                    <p>支持 MP3, WAV, FLAC 等多种音频格式。</p>
+                </div>
+                <div class="feature-item">
+                    <img src="2.png" alt="Feature 5">
+                    <h3>高清音质</h3>
+                    <p>提供最佳听觉体验，让音乐更动人。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="download" class="download">
+        <div class="container">
+            <h2>立即下载</h2>
+            <p>适用于 Windows 和 Android 平台</p>
+            <div class="platform-buttons">
+                <div class="platform-button">
+                    <a href="" download class="btn">下载 Windows 版</a>
+                    <span class="status"></span>
+                </div>
+                <div class="platform-button">
+                    <a href="http://xgorb.cn/X-GORB-Music-Android-1.0.apk" download class="btn">下载 Android 版</a>
+                    <span class="status">最新版本：1.0</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>关于我们</h2>
+            <p>X-GORB Studio 成立于 2019 年，致力于开发高效、可靠的工具软件，帮助企业提升生产力。</p>
+            <p>我们的团队由一群充满激情的技术专家组成，专注于技术创新和用户体验。</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 X-GORB Studio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="eb9f96e03bedb2cf36ff7503-text/javascript">
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('active');
+        });
+    </script>
+    <script src="script.js" type="eb9f96e03bedb2cf36ff7503-text/javascript"></script>
+    <script src="https://xgorb.cn/china.js" type="eb9f96e03bedb2cf36ff7503-text/javascript"></script>
+<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="eb9f96e03bedb2cf36ff7503-|49" defer></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"905fc94c0e3693f6","version":"2025.1.0","r":1,"token":"c09a4cdfa62944b1a045a58ca3736dce","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}}}' crossorigin="anonymous"></script>
+</body>
+</html>

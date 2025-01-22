@@ -1,140 +1,138 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>X-GORB Music - Free、Open、Clean and ad-free</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="favicon.ico" type="x-icon">
+    <title>X-GORB Music</title>
+    <link rel="icon" href="https://xgorb.cn/music/favicon.ico" type="x-icon">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            padding: 20px;
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .playlist {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .playlist li {
+            background-color: #e9ecef;
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+        .playlist li:hover {
+            background-color: #d7d7d7;
+        }
+        .play-button {
+            cursor: pointer;
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .play-button:hover {
+            text-decoration: underline;
+        }
+        audio {
+            width: 100%;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
-    <header>
-<img id="logo" src="logo.png" alt="Logo">  <nav>
-            <ul>
-                <li><a href="xgorb.html" id="homeLink">音乐</a></li>
-                <li><a href="http://www.xgorb.cn" id="homeLink">X-GORB官网</a></li>
-                <li><a href="http://so.xgorb.cn" id="homeLink">X-GORB搜索引擎</a></li>
-            </ul>
-        </nav>
-    </header>
-    <style>       
-.icp-container {
-            display: flex;
-            align-items: center;
-            justify-content: center; /* 水平居中 */
-            font-size: 16px; /* 默认字体大小 */
-            margin-top: 50px; /* 可以根据需要调整上下边距 */
+    <div class="container">
+        <img src="https://xgorb.cn/music/logo.png" alt="X-GORB音乐列表">
+        <input type="text" id="searchInput" onkeyup="filterSongs()" placeholder="搜索歌曲...">
+        <ul class="playlist" id="playlist">
+            <li>
+                <span>Midnight Feeling</span>
+                <span class="play-button" onclick="playSong('bgm/1.mp3')">Play</span>
+            </li>
+            <li>
+                <span>Dehors</span>
+                <span class="play-button" onclick="playSong('bgm/2.mp3')">Play</span>
+            </li>
+            <li>
+                <span>Wavin' flag</span>
+                <span class="play-button" onclick="playSong('bgm/3.mp3')">Play</span>
+            </li>
+            <li>
+                <span>Cute Pinch(PHONK)</span>
+                <span class="play-button" onclick="playSong('bgm/4.mp3')">Play</span>
+            </li>
+            <li>
+                <span>In The Shadow Of The Sun</span>
+                <span class="play-button" onclick="playSong('bgm/5.mp3')">Play</span>
+            </li>
+            <li>
+                <span>Drown (feat. Clinton Kane)</span>
+                <span class="play-button" onclick="playSong('bgm/6.mp3')">Play</span>
+            </li>
+            <li>
+                <span>Slow Motion</span>
+                <span class="play-button" onclick="playSong('bgm/7.mp3')">Play</span>
+            </li>
+            <!-- Add more songs as needed -->
+        </ul>
+
+        <audio id="audioPlayer" controls></audio>
+    </div>
+
+    <script>
+        function playSong(filePath) {
+            const audioPlayer = document.getElementById('audioPlayer');
+            audioPlayer.src = filePath;
+            audioPlayer.play();
         }
-        .icp-container img {
-            width: 1em; /* 图片宽度与字体大小一致 */
-            height: auto;
-            margin-right: 0.5em; /* 图片和文字之间的间距 */
-        }
-        .icp-container a {
-            color: black;
-            text-decoration: none;
-            font-size: 1em; /* 文字大小与默认字体大小一致 */
-        }
-        @media (max-width: 600px) {
-            .icp-container {
-                font-size: 14px; /* 在小屏幕上减小字体大小 */
+
+        function filterSongs() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const playlist = document.getElementById('playlist');
+            const items = playlist.getElementsByTagName('li');
+
+            for (let i = 0; i < items.length; i++) {
+                const songName = items[i].getElementsByTagName('span')[0];
+                if (songName) {
+                    const textValue = songName.textContent || songName.innerText;
+                    if (textValue.toLowerCase().indexOf(input) > -1) {
+                        items[i].style.display = '';
+                    } else {
+                        items[i].style.display = 'none';
+                    }
+                }
             }
         }
-/* 定义整个播放器的样式 */
-.player {
-    margin-top: 50px; /* 距离上方50px */
-    height: 350px; /* 高度为350px */
-    width: 800px; /* 宽度为800px */
-    background-color: rgba(216, 218, 221, 0.5); /* 背景颜色为rgba(216, 218, 221, 0.5) */
-    border-radius: 10px; /* 边框半径为10px */
-}
- 
-/* 定义封面的样式 */
-.player .cover {
-    display: inline-block; /* 内部元素呈现为块级元素 */
-    height: 250px; /* 高度为250px */
-    width: 250px; /* 宽度为250px */
-    margin-left: 30px; /* 距离左侧30px */
-    margin-top: 30px; /* 距离上方30px */
-    overflow: hidden; /* 溢出部分隐藏 */
-    border-radius: 10px; /* 边框半径为10px */
-}
- 
-/* 定义歌曲信息的样式 */
-.song {
-    position: absolute; /* 绝对定位 */
-    margin-left: 50px; /* 距离左侧50px */
-    margin-top: 20px; /* 距离上方20px */
-    left: 250px; /* 左侧距离为250px */
-    top: 150px; /* 上方距离为150px */
-    height: 250px; /* 高度为250px */
-    width: 400px; /* 宽度为400px */
-    overflow: auto; /* 溢出部分自动滚动 */
-}
- 
-/* 隐藏滚动条 */
-div::-webkit-scrollbar {
-    display: none;
-}
- 
-/* 定义p标签的字体样式 */
-.song p {
-    font-family: "楷体";
-    margin: 5px; /* 上下左右各留出5px的间距 */
-}
- 
-/* 定义h2标签的字体样式 */
-.song h2 {
-    font-family: "楷体";
-}
- 
-/* 设置音频样式 */
-audio {
-    width: 100%; /* 宽度为100% */
-    height: 50px; /* 高度为50px */
-    border-radius: 10px; /* 边框半径为10px */
-}
- 
-/* 设置音频播放进度条的颜色 */
-audio::-webkit-media-controls-progress-bar {
-    background-color: #000;
-}
- 
-/* 定义播放器的背景颜色 */
-.player {
-    /* background: linear-gradient(to bottom, #304352, #d7d2cc); */
-    background-color: rgba(238, 238, 238, 0.2); /* 背景颜色为rgba(238, 238, 238, 0.2) */
-}
- 
-/* 隐藏音频播放器的背景颜色 */
-audio::-webkit-media-controls-enclosure {
-    background-color: rgba(216, 218, 221, 0.0);
-}
-    </style>
-<section id="about">
-                <!-- 音乐播放器 -->
-             <div class="player">
-                <!-- 歌曲封面 -->
-                <div class="cover">
-                    <img src="fm1.jpg" alt="1">
-                </div>
-                <!-- 歌词设置 -->
-                <div class="song">
-                    <h2>Waka Waka (This Time for Africa) - Shakira</h2>
-                    </p>
-                </div>
-                <!-- audio标签 -->
-                <div class="mus">
-                    <audio src="wakawaka.mp3" controls></audio>
-                </div>
-            </div>
-</section>
-    </main>
-    <footer>
-        <p>Copyright © 2024 X-GORB. All rights reserved.</p>
-        <p>人生就像骑自行车，要保持平衡就得往前走。</p>
-        <p>在线QQ群：985565412</p>
-    </footer>
-    <script src="https://xgorb.cn/china.js"></script>
+    </script>
 </body>
 </html>

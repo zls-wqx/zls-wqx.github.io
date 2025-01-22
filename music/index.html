@@ -87,63 +87,63 @@
         <ul class="playlist" id="playlist">
             <li>
                 <span>Midnight Feeling</span>
-                <span class="play-button" onclick="playSong('https://xgorb.cn/bgm/1.mp3')">Play</span>
+                <span class="play-button" onclick="playSong('bgm/1.mp3')">Play</span>
             </li>
             <li>
                 <span>Dehors</span>
-                <span class="play-button" onclick="playSong('https://xgorb.cn/bgm/2.mp3')">Play</span>
+                <span class="play-button" onclick="playSong('bgm/2.mp3')">Play</span>
             </li>
             <li>
                 <span>Wavin' flag</span>
-                <span class="play-button" onclick="playSong('https://xgorb.cn/bgm/3.mp3')">Play</span>
+                <span class="play-button" onclick="playSong('bgm/3.mp3')">Play</span>
             </li>
             <li>
                 <span>Cute Pinch(PHONK)</span>
-                <span class="play-button" onclick="playSong('https://xgorb.cn/bgm/4.mp3')">Play</span>
+                <span class="play-button" onclick="playSong('bgm/4.mp3')">Play</span>
             </li>
             <li>
                 <span>In The Shadow Of The Sun</span>
-                <span class="play-button" onclick="playSong('https://xgorb.cn/bgm/5.mp3')">Play</span>
+                <span class="play-button" onclick="playSong('bgm/5.mp3')">Play</span>
             </li>
             <li>
                 <span>Drown (feat. Clinton Kane)</span>
-                <span class="play-button" onclick="playSong('https://xgorb.cn/bgm/6.mp3')">Play</span>
+                <span class="play-button" onclick="playSong('bgm/6.mp3')">Play</span>
             </li>
             <li>
                 <span>Slow Motion</span>
-                <span class="play-button" onclick="playSong('https://xgorb.cn/bgm/7.mp3')">Play</span>
+                <span class="play-button" onclick="playSong('bgm/7.mp3')">Play</span>
             </li>
             <li>
                 <span>带我到山顶</span>
-                <span class="play-button" onclick="playSong('https://xgorb.cn/bgm/8.mp3')">Play</span>
+                <span class="play-button" onclick="playSong('bgm/8.mp3')">Play</span>
             </li>
             <li>
                 <span>月光凉，落满窗</span>
-                <span class="play-button" onclick="playSong('https://xgorb.cn/bgm/9.mp3')">Play</span>
+                <span class="play-button" onclick="playSong('bgm/9.mp3')">Play</span>
             </li>
             <li>
                 <span>Counting Stars</span>
-                <span class="play-button" onclick="playSong('https://xgorb.cn/bgm/10.mp3')">Play</span>
+                <span class="play-button" onclick="playSong('bgm/10.mp3')">Play</span>
             </li>
             <li>
                 <span>突然的自我</span>
-                <span class="play-button" onclick="playSong('https://xgorb.cn/bgm/11.mp3')">Play</span>
+                <span class="play-button" onclick="playSong('bgm/11.mp3')">Play</span>
             </li>
             <li>
                 <span>Клетка</span>
-                <span class="play-button" onclick="playSong('https://xgorb.cn/bgm/12.mp3')">Play</span>
+                <span class="play-button" onclick="playSong('12.mp3')">Play</span>
             </li>
             <li>
                 <span>我们的时光</span>
-                <span class="play-button" onclick="playSong('https://xgorb.cn/bgm/13.mp3')">Play</span>
+                <span class="play-button" onclick="playSong('13.mp3')">Play</span>
             </li>
             <li>
                 <span>journey to the light（光明之旅）</span>
-                <span class="play-button" onclick="playSong('https://xgorb.cn/bgm/14.mp3')">Play</span>
+                <span class="play-button" onclick="playSong('14.mp3')">Play</span>
             </li>
             <li>
                 <span>Erika</span>
-                <span class="play-button" onclick="playSong('https://xgorb.cn/bgm/15.mp3')">Play</span>
+                <span class="play-button" onclick="playSong('bgm/15.mp3')">Play</span>
             </li>
             <li>
                 <span>开发人员：吴延梓</span>
@@ -157,11 +157,14 @@
 </ul>
     </div>
 
-    <script>
+<script>
         function playSong(filePath) {
             const audioPlayer = document.getElementById('audioPlayer');
             audioPlayer.src = filePath;
-            audioPlayer.play();
+            audioPlayer.play().catch(error => {
+                alert('无法播放此歌曲，请稍后再试或尝试其他歌曲。');
+                console.error('Audio playback failed:', error);
+            });
         }
 
         function filterSongs() {
@@ -169,15 +172,10 @@
             const playlist = document.getElementById('playlist');
             const items = playlist.getElementsByTagName('li');
 
-            for (let i = 0; i < items.length; i++) {
-                const songName = items[i].getElementsByTagName('span')[0];
+            for (let item of items) {
+                let songName = item.querySelector('span:first-child');
                 if (songName) {
-                    const textValue = songName.textContent || songName.innerText;
-                    if (textValue.toLowerCase().indexOf(input) > -1) {
-                        items[i].style.display = '';
-                    } else {
-                        items[i].style.display = 'none';
-                    }
+                    item.style.display = songName.textContent.toLowerCase().includes(input) ? '' : 'none';
                 }
             }
         }

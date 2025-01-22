@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>X-GORB Music</title>
+    <title>X-GORB Music - Free、Open、Clean and ad-free</title>
     <link rel="icon" href="https://xgorb.cn/music/favicon.ico" type="x-icon">
     <style>
         body {
@@ -79,6 +79,7 @@
         <h1>X-GORB Music v1.2</h1>
         <img src="https://xgorb.cn/music/logo.png" alt="">
         <input type="text" id="searchInput" onkeyup="filterSongs()" placeholder="搜索歌曲...">
+<audio id="audioPlayer" controls></audio>
         <ul class="playlist" id="playlist">
             <li>
                 <span>Midnight Feeling</span>
@@ -141,7 +142,6 @@
                 <span class="play-button" onclick="playSong('bgm/15.mp3')">Play</span>
             </li>
 </ul>
-<audio id="audioPlayer" controls></audio>
     </div>
 
     <script>

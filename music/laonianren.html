@@ -1,116 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>X-GORB Music - Free、Open、Clean and ad-free</title>
-    <link rel="icon" href="https://xgorb.cn/music/favicon.ico" type="x-icon">
-<style>
+    <title>X-GORB Music - 适合老年人的简单界面</title>
+    <link rel="icon" href="https://xgorb.cn/music/favicon.ico" type="image/x-icon">
+    <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            background-color: #fff; /* 白色背景 */
             margin: 0;
             padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            color: #000; /* 黑色文字 */
+            font-size: 1.6em; /* 更大字体 */
         }
         .container {
-            background-color: #fff;
+            max-width: 700px; /* 限制最大宽度 */
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9; /* 浅灰色背景 */
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            max-height: 90vh;
-            overflow-y: auto;
-            padding: 20px;
-            text-align: center;
         }
         img {
-            max-width: 100%;
+            width: 100%;
             height: auto;
+            display: block;
             margin-bottom: 20px;
         }
         input[type="text"] {
-            width: calc(100% - 22px);
-            padding: 10px;
+            width: 100%;
+            padding: 15px;
             margin-bottom: 20px;
             border: 1px solid #ccc;
             border-radius: 5px;
+            font-size: 1.4em;
         }
         .playlist {
             list-style-type: none;
             padding: 0;
             margin: 0;
-            max-height: 400px; /* 设置最大高度 */
-            overflow-y: auto; /* 添加滚动条 */
         }
         .playlist li {
             background-color: #e9ecef;
             margin-bottom: 10px;
-            padding: 15px;
+            padding: 20px;
             border-radius: 5px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            transition: background-color 0.3s ease;
-        }
-        .playlist li:hover {
-            background-color: #d7d7d7;
+            font-size: 1.4em;
         }
         .play-button {
             cursor: pointer;
             color: #007bff;
             text-decoration: none;
             font-weight: bold;
-        }
-        .play-button:hover {
-            text-decoration: underline;
+            font-size: 1.4em;
         }
         audio {
             width: 100%;
             margin-top: 20px;
             border-radius: 5px;
         }
-        .header {
-            margin-bottom: 20px;
-        }
-        .footer {
-            margin-top: 20px;
-            font-size: 12px;
-            color: #6c757d;
-        }
-        .footer a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        .footer a:hover {
-            text-decoration: underline;
-        }
-
-        /* 科技感按钮样式 */
-        #updateHistoryBtn {
-            background: linear-gradient(135deg, #00c6ff, #0072ff);
-            border: none;
+        button {
+            background-color: #007bff;
             color: white;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin-top: 20px;
-            cursor: pointer;
+            padding: 15px 30px;
+            font-size: 1.4em;
+            border: none;
             border-radius: 5px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
+            cursor: pointer;
+            transition: background-color 0.3s;
         }
-
-        #updateHistoryBtn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        button:hover {
+            background-color: #0056b3;
         }
-
-        /* 弹窗样式 */
         .modal {
             display: none; /* 默认隐藏 */
             position: fixed;
@@ -120,24 +85,21 @@
             width: 100%;
             height: 100%;
             overflow: auto;
-            background-color: rgb(0,0,0);
             background-color: rgba(0,0,0,0.4);
         }
 
         .modal-content {
-            background: linear-gradient(135deg, #00c6ff, #0072ff);
-            color: white;
+            background-color: #fefefe;
             margin: 15% auto;
             padding: 20px;
-            border: none;
+            border: 1px solid #888;
             width: 80%;
             max-width: 600px;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
         .close {
-            color: white;
+            color: #aaa;
             float: right;
             font-size: 28px;
             font-weight: bold;
@@ -167,20 +129,12 @@
         .modal li {
             margin-bottom: 10px;
         }
-
-        /* 更新日志弹窗内容样式 */
-        .update-log {
-            list-style-type: none;
-            padding-left: 0;
-        }
-</style>
+    </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-        </div>
         <img src="https://xgorb.cn/music/logo.png" alt="X-GORB Logo">
-                <a href="laonianren.html" title="进入适老版" target="_blank"><img src="img/jrshilaoban.png"></a>
+       <img src="img/shilaoban.png" alt="X-GORB Logo">
         <input type="text" id="searchInput" onkeyup="filterSongs()" placeholder="搜索歌曲...">
         <audio id="audioPlayer" controls></audio>
         <ul class="playlist" id="playlist">
@@ -340,7 +294,10 @@
                 <span>赶绵羊（整活神曲）</span>
                 <span class="play-button" onclick="playSong('bgm/39.mp3')">Play</span>
             </li>
+
+            <!-- 其他列表项 -->
         </ul>
+        <button id="updateHistoryBtn" onclick="toggleUpdateLog()">查看更新日志</button>
 <div class="footer">
             <p>开发人员：吴延梓</p>
             <p>© 2019 - 2025 X-GORB Studio. All rights reserved.</p>
@@ -353,8 +310,6 @@
               <img src="https://www.gov.cn/images/20230928shilaohuaicon.jpg" alt="适用于老龄化标志">
               <img src="https://i0.hdslb.com/bfs/activity-plat/static/20210729/df3e2ff90b315fca2f8d24a29cb68a47/iUlvDrrAnu.png" alt="962110">
             </p>        </div>
-        <!-- 添加更新日志按钮 -->
-        <button id="updateHistoryBtn" onclick="toggleUpdateLog()">查看更新日志</button>
 
         <!-- 更新日志弹窗 -->
         <div id="updateLogModal" class="modal">
@@ -362,12 +317,12 @@
                 <span class="close" onclick="toggleUpdateLog()">&times;</span>
                 <h2>软件更新历史</h2>
                 <ul>
-                    <li><strong>版本 1.5:</strong> 2025/1/24 新增软件更新历史，解决了一些反馈bug的人</li>
-                    <li><strong>版本 1.4:</strong> 2025/1/22 新增网站音乐，多了很多bug</li>
-                    <li><strong>版本 1.3:</strong> 2025/1/20 修改网站样式，解决了一些反馈bug的人</li>
-                    <li><strong>版本 1.2:</strong> 2025/1/10 服务器更改，解决了一些反馈bug的人</li>
-                    <li><strong>版本 1.1:</strong> 2025/1/10 解决了一些反馈bug的人</li>
-                    <li><strong>版本 1.0:</strong> 2025/1/10 太好了是2025，我们有救了！</li>
+                    <li><strong>版本 1.5:</strong> 2025/1/24 新增软件更新历史，解决了一些反馈bug的问题。</li>
+                    <li><strong>版本 1.4:</strong> 2025/1/22 添加网站音乐，修复了许多问题。</li>
+                    <li><strong>版本 1.3:</strong> 2025/1/20 修改网站样式，修复了一些问题。</li>
+                    <li><strong>版本 1.2:</strong> 2025/1/10 更改服务器，修复了一些问题。</li>
+                    <li><strong>版本 1.1:</strong> 2025/1/10 修复了一些问题。</li>
+                    <li><strong>版本 1.0:</strong> 2025/1/10 欢迎进入2025年！</li>
                 </ul>
             </div>
         </div>
@@ -378,7 +333,7 @@
             const audioPlayer = document.getElementById('audioPlayer');
             audioPlayer.src = filePath;
             audioPlayer.play().catch(error => {
-                console.error('Audio playback failed:', error);
+                console.error('音频播放失败:', error);
             });
         }
 

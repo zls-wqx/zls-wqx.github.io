@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>X-GORB Music - Free、Open、Clean and ad-free</title>
     <link rel="icon" href="https://xgorb.cn/music/favicon.ico" type="x-icon">
-    <style>
+<style>
         body {
             font-family: 'Arial', sans-serif;
             background-color: #f5f5f5;
@@ -87,7 +87,93 @@
         .footer a:hover {
             text-decoration: underline;
         }
-    </style>
+
+        /* 科技感按钮样式 */
+        #updateHistoryBtn {
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        #updateHistoryBtn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* 弹窗样式 */
+        .modal {
+            display: none; /* 默认隐藏 */
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+        }
+
+        .modal-content {
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            color: white;
+            margin: 15% auto;
+            padding: 20px;
+            border: none;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .close {
+            color: white;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            background: rgba(0,0,0,0.2);
+            border-radius: 50%;
+            padding: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .close:hover,
+        .close:focus {
+            background: rgba(0,0,0,0.4);
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .modal h2 {
+            margin-top: 0;
+        }
+
+        .modal ul {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        .modal li {
+            margin-bottom: 10px;
+        }
+
+        /* 更新日志弹窗内容样式 */
+        .update-log {
+            list-style-type: none;
+            padding-left: 0;
+        }
+</style>
 </head>
 <body>
     <div class="container">
@@ -250,7 +336,7 @@
                 <span class="play-button" onclick="playSong('bgm/38.mp3')">Play</span>
             </li>
         </ul>
-        <div class="footer">
+<div class="footer">
             <p>开发人员：吴延梓</p>
             <p>© 2019 - 2025 X-GORB Studio. All rights reserved.</p>
             <p>官方网站：<a href="http://www.xgorb.cn" target="_blank">www.xgorb.cn</a></p>
@@ -258,6 +344,24 @@
                 <a href="https://www.12377.cn/" title="网络违法犯罪举报中心" target="_blank"><img src="img/2.png"></a>
                 <a href="https://cyberpolice.mps.gov.cn/" title="中央网信办信息举报中心" target="_blank"><img src="img/1.png"></a>
             </p>
+        </div>
+        <!-- 添加更新日志按钮 -->
+        <button id="updateHistoryBtn" onclick="toggleUpdateLog()">查看更新日志</button>
+
+        <!-- 更新日志弹窗 -->
+        <div id="updateLogModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="toggleUpdateLog()">&times;</span>
+                <h2>软件更新历史</h2>
+                <ul>
+                    <li><strong>版本 1.5:</strong> 2025/1/24 新增软件更新历史，解决了一些反馈bug的人</li>
+                    <li><strong>版本 1.4:</strong> 2025/1/22 新增网站音乐，多了很多bug</li>
+                    <li><strong>版本 1.3:</strong> 2025/1/20 修改网站样式，解决了一些反馈bug的人</li>
+                    <li><strong>版本 1.2:</strong> 2025/1/10 服务器更改，解决了一些反馈bug的人</li>
+                    <li><strong>版本 1.1:</strong> 2025/1/10 解决了一些反馈bug的人</li>
+                    <li><strong>版本 1.0:</strong> 2025/1/10 太好了是2025，我们有救了！</li>
+                </ul>
+            </div>
         </div>
     </div>
 
@@ -282,9 +386,11 @@
                 }
             }
         }
+
+        function toggleUpdateLog() {
+            var modal = document.getElementById('updateLogModal');
+            modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
+        }
     </script>
 </body>
 </html>
-
-
-

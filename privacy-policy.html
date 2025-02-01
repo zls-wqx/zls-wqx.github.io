@@ -6,14 +6,14 @@
     <title>X-GORB工作室 - 隐私政策</title>
     <style>
         @font-face {
-    font-family: 'CustomFont'; /* 你可以为字体指定任何名称 */
-    src: url('http://qqcb.xgorb.cn/fonts/YeZiGongChangTangYingHei-2.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
+            font-family: 'CustomFont'; /* 你可以为字体指定任何名称 */
+            src: url('https://xgorb.cn/YeZiGongChangTangYingHei-2.ttf') format('truetype'); /* 替换为实际字体文件URL */
+            font-weight: normal;
+            font-style: normal;
+        }
 
-body {
-    font-family: 'CustomFont', Arial, sans-serif; /* 使用你定义的字体 */
+        body {
+            font-family: 'CustomFont', Arial, sans-serif; /* 使用你定义的字体 */
             margin: 0;
             padding: 0;
             background: url('1.jpg') no-repeat center center fixed; 
@@ -53,6 +53,29 @@ body {
         }
         footer a {
             color: #0078d4;
+        }
+
+        .icp-container {
+            display: flex;
+            align-items: center;
+            justify-content: center; /* 水平居中 */
+            font-size: 16px; /* 默认字体大小 */
+            margin-top: 50px; /* 可以根据需要调整上下边距 */
+        }
+        .icp-container img {
+            width: 1em; /* 图片宽度与字体大小一致 */
+            height: auto;
+            margin-right: 0.5em; /* 图片和文字之间的间距 */
+        }
+        .icp-container a {
+            color: black;
+            text-decoration: none;
+            font-size: 1em; /* 文字大小与默认字体大小一致 */
+        }
+        @media (max-width: 600px) {
+            .icp-container {
+                font-size: 14px; /* 在小屏幕上减小字体大小 */
+            }
         }
     </style>
 <style>

@@ -1,1101 +1,1514 @@
-/* ------------------------------------------------- Large Screen. 1200 ---------------------------------------------------*/
- @media (min-width: 1400px) and (max-width: 1800px) {
-	.bg_style .finasol_menu {
-		padding-right: 10px;
-	}
-	.finasol-header-top {
-		padding-right: 150px;
-		padding-left: 150px;
-	}
-	.finasol_nav_area, .trp_nav_area, .transprent-menu .finasol_nav_area {
-		padding-right: 60px;
-		padding-left: 60px;
-	}
-	.txbdsinner {
-		width: 75.29%;
-	}
-	.recent-post-text {
-		padding-left: 0;
-	}
-	section.shop_grid_area.sec_padding {
-		padding: 115px 30px 65px 30px;
-	}
-	
+
+/* Normal desktop :1400x. */
+@media (min-width: 1400px) and (max-width: 1600px){
+
+
+}
+
+
+/* Normal desktop :1300px. */
+@media (min-width: 1300px) and (max-width: 1399px) {
+.hero-content h4::before {
+    left: 36%;
+}
+.hero-content h4::after {
+    right: 36%;
+}
+p.hero-desc {
+    width: 59%;
+}
+.single-feature-box {
+    padding: 18px 15px 28px;
+}
+.about-thumb {
+    margin-left: -90px;
+}
+.about-shape {
+    left: 5px;
+}
+p.desc-one {
+    width: 80%;
+}
+.section-title h1 {
+    font-size: 44px;
+}
+.working-process-box {
+    padding: 0 30px 0;
+}
+.project-content {
+    padding: 10px 30px 40px;
+}
+.single-testimonial-thumb {
+    left: -68px;
+}
+.testi-help-button {
+    width: 83%;
+}
+.testi-desc p {
+    width: 85%;
+}
+
+
+
+
+
+
+
+/*service-details*/
+ul.sidebar-menu li a {
+    font-size: 13px;
+}
+.widget-download-box {
+    padding: 30px 20px 15px;
+}
+.widget-download-box ul li a {
+    padding: 14px 19px;
+}
+.service-dtls-all-items {
+    padding-left: 40px;
+}
+
+.history-section .section-title h1 {
+    font-size: 38px;
+    line-height: 42px;
+}
+/*shope-details*/
+.widget-check {
+    font-size: 14px;
+}
+.single-products-box:hover .product-thumb-icon a:nth-child(1) {
+    left: 76px;
+}
+.single-products-box:hover .product-thumb-icon a:nth-child(2) {
+    right: 56px;
+}
+
+/*blog-detaisl*/
+.blog-dtls-thumb img {
+    width: 100%;
+}
+.post-comment-thumb {
+    margin-right: 16px;
+    margin-top: 28px;
+}
+.blog-post-comment span.rights-reply {
+    top: -98px;
+}
+.rpost-content h4 a {
+    font-size: 13px;
+    line-height: 22px;
+}
+
+
+
+
+
+
+
+}
+
+
+
+
+
+/* Normal desktop :1200px. */
+@media (min-width: 1200px) and (max-width: 1299px) {
+.hero-content h4::before {
+    left: 36%;
+}
+.hero-content h4::after {
+    right: 36%;
+}
+p.hero-desc {
+    width: 56%;
+}
+.about-thumb {
+    margin-left: -89px;
+}
+.about-shape {
+    left: 53px;
+}
+p.desc-one {
+    width: 85%;
+}
+.section-title h1 {
+    font-size: 43px;
+}
+.skill-section p.desc-one {
+    width: 90%;
+}
+.working-process-box {
+    padding: 0 26px 0;
+}
+.project-content {
+    padding: 10px 33px 40px;
+}
+.single-testimonial-thumb {
+    left: -43px;
+}
+.testi-help-button {
+    width: 83%;
+}
+
+
+/*--inner-pages-responsive--css*/
+.portfolio-details-thumb img {
+    width: 100%;
+}
+/*service-details*/
+ul.sidebar-menu li a {
+    font-size: 13px;
+}
+.widget-download-box ul li a {
+    padding: 12px 13px;
+    font-size: 14px;
+}
+.service-thumb2 img {
+    width: 100%;
+}
+
+.history-section .section-title h1 {
+    font-size: 38px;
+    line-height: 42px;
+}
+
+/*shope-datils*/
+.widget-check {
+    font-size: 13px;
+}
+.single-products-box:hover .product-thumb-icon a:nth-child(2) {
+    right: 55px;
+}
+.single-products-box:hover .product-thumb-icon a:nth-child(1) {
+    left: 67px;
+}
+/*blog-details*/
+.blog-dtls-thumb img {
+    width: 100%;
+}
+.post-comment-thumb {
+    margin-top: 27px;
+}
+.blog-post-comment span.rights-reply {
+    top: -105px;
+}
+.rpost-content h4 a {
+    font-size: 12px;
+    line-height: 22px;
+
+}
+/*contact-section*/
+.contact-infor-content p {
+    font-size: 15px;
+    line-height: 26px;
+}
+
+
+
 
 
 
 }
-/* ------------------------------------------------- Large Screen. 1200 ---------------------------------------------------*/
- @media (min-width: 1200px) and (max-width: 1440px) {
-	.finasol_nav_area, .trp_nav_area, .transprent-menu .finasol_nav_area {
-		padding-left: 30px;
-		padding-right: 30px;
-	}
-	.txbdsinner {
-		width: 90.29%;
-	}
-	.finasol-header-top {
-		padding-right: 30px;
-		padding-left: 30px;
-	}
-	.shop_grid_area.sec_padding.shop_page_shop.port_grid.sopage_shop {
-		padding: 115px 0 102px 0;
-	}
-	.margin_left90{
-		margin-left: 0;
-	}
-	.fn_fea_area {
-		padding: 60px;
-	}
-	/* about area css */
-	.txbdsvflex {
-		display: inherit;
-	}
-	.ser2_inner .txbdsvflex {
-		display: flex;
-	}
-	.chos_witr {
-		padding: 0 30px 0 25px;
-	}
-	.faq_con {
-		padding: 0;
-	}
-	h2.ptfcolor a{
-		font-size: 20px;
-	}
-	
-	
+
+/* Normal desktop :992px. */
+@media (min-width: 992px) and (max-width: 1199px) {
+.header-button a {
+    padding: 8px 20px;
 }
-/* ------------------------------------------------- Large Screen. 1025 ---------------------------------------------------*/
- @media (min-width: 1025px) and (max-width: 1800px) {
+.header-menu {
+    text-align: right;
 }
-/* ------------------------------------------------- Large Screen. 1024 ---------------------------------------------------*/
- @media (min-width: 1024px) and (max-width: 1600px) {
-     .ebk_ser_area .txstcolor {
-		font-size: 23px;
-	}
-	
-	
-	.creative_header_address {
-		padding-left: 15px;
-	}
-	
-	
-	
-	
-	
-	
+.hero-content h4::before {
+    left: 33%;
 }
-/* ------------------------------------------------- Laptop Screen 1366 ---------------------------------------------------*/
- @media (min-width: 1170px) and (max-width: 1366px) {
-     .em_creative_header:after {
-         transform: rotate(-114deg);
-    }
-     .creative_header_address {
-         padding-left: 0;
-    }
-    /* banner area css */
-     .witr_banner_content p {
-         width: 70%;
-    }
+.hero-content h4::after {
+    right: 33%;
 }
-/* ------------------------------------------------- Old Desktop :1365-1660 ---------------------------------------------------*/
- @media (min-width: 1365px) and (max-width: 1660px) {
-    /* New Top Menu css */
-     .all_header_abs {
-        /* position: inherit;
-         */
-    }
-     #scrollUp {
-         right: 30px;
-    }
-    /* swiper slider */
-     .witr_swiper_area .text-right .witr_slider_thumb {
-         left: -95px !important;
-    }
-     .witr_swiper_height {
-         width: 100% !important;
-    }
-     .w_slider_3 .witr_swiper_height {
-         width: 100% !important;
-         transform: translateX(-50%) !important;
-         left: 15%;
-    }
-    /*======== slick slider ==========*/
-     .witr_ds_content {
-         height: 980px !important;
-    }
+.single-feature-box {
+    padding: 18px 25px 28px;
 }
-/* ------------------------------------------------- Old Desktop :992 ---------------------------------------------------*/
- @media (min-width: 992px) and (max-width: 1364px) {
-     .play-overlay{
-         top: 50% !important;
-         left: 50% !important;
-    }
+.section-title h1 {
+    font-size: 36px;
+    line-height: 34px;
 }
-/* ------------------------------------------------- Old Desktop :992 ---------------------------------------------------*/
- @media (min-width: 992px) and (max-width: 1199px) {
-	.finasol-header-top {
-		padding-right: 15px;
-		padding-left: 15px;
-	}
-    .finasol_nav_area, .trp_nav_area, .transprent-menu .finasol_nav_area {
-		padding-left: 15px;
-		padding-right: 15px;
-	}
-	.em-quearys-top.msin-menu-search .em-quearys-menu i {
-		margin-left: 8px;
-	}
-	.finasol_menu>ul>li>a {
-		margin: 35px 9px;
-		font-size: 16px;
-	}
-	.em_menu_login .dtbtn {
-		margin-left: 6px;
-	}
-	.mini_shop_content {
-		margin-left: 6px;
-	}
-	.em_menu_login .dtbtn {
-		padding: 9px 22px;
-	}
-	.dtbtn {
-		font-size: 15px;
-		margin-left: 8px;
-	}
-	.ttin h2, .ttin h3 {
-		font-size: 35px !important;
-	}
-	.txbdscontent p{
-		width: 60%;
-	}
-	/* single blog */
-	.shortcode_content {
-		font-size: 35px;
-	}
-	.recent-post-text {
-		padding-left: 8px;
-	}
-	.recent-post-image img {
-		margin-top: 8px;
-	}
-	.recent-post-text span {
-		font-size: 15px;
-	}
-	.blog-left-side>div {
-		padding: 35px 15px 35px;
-	}
-	.recent-post-item {
-		padding-bottom: 0;
-	}
-	.blog_left {
-		padding: 85px 25px 70px 30px;
-		margin: 0 0 50px 0;
-	}
-	.blog_witr {
-		padding-left: 18px;
-	}
-	h2.wblogtitle a {
-		font-size: 20px;
-	}
-	.gallery-columns-3 .gallery-item {
-		max-width: 31.24%;
-	}
-	.team_witr .sttwo {
-		font-size: 24px !important;
-	}
-	/* slider area css */
-	.swttwo {
-		font-size: 60px;
-	}
-	.swtthree {
-		font-size: 60px;
-	}
-	.txbdsinner {
-		height: 700px;
-		width: 93.29%;
-	}
-	.ssttwo {
-		font-size: 70px;
-	}
-	/* feature area css */
-	.fn_fea_area {
-		padding: 70px 0 0;
-	}
-	/* about area css */
-	.ab_witr_con {
-		padding: 0;
-	}
-	/* service area css */
-	.txbdsvflex {
-		display: inherit;
-	}
-	.sp-txbdsvfdrl {
-		padding-left: 0;
-		padding-top: 10px;
-	}
-	/* team area css */
-	.team_left_con {
-		margin-right: -10px;
-		padding-top: 15px;
-	}
-	.team_witr .tts {
-		margin-bottom: 20px;
-		margin-top: 0;
-	}
-	.team_inner .sttwo {
-		font-size: 23px !important;
-	}
-	.team_inner img {
-		margin-right: 15px;
-		width: 40%;
-	}
-	.team_inner .tts {
-		margin-top: 0;
-	}
-	/* choose area css */
-	.chos_witr {
-		padding: 0 5px 0 25px;
-	}
-	.chos_item2 {
-		padding: 0 16px 30px 20px;
-	}
-	.chos_item1 {
-		border-width: 0 1px 1px 0;
-	}
-	.chos_witr .txbdsvtitle {
-		font-size: 20px;
-	}
-	.chos_item4 {
-		padding: 0 17px 30px 20px;
-	}
-	/* skill area css */
-	.skill_witr {
-		padding: 10px 10px 0 30px;
-	}
-	.ps1 .witr_content_pslide_text {
-		padding: 0 0 15px 0;
-	}
-	.skil_witr{
-		padding: 30px 0 0 0;
-	}
-	/* counter area css */
-	.coun_witr {
-		margin: 0;
-	}
-	/* project area css */
-	.witr_pslide4.ps3.ps1 .witr_single_pslide .witr_content_pslide_text {
-		display: inherit;
-	}
-	.p4clmn .ttin p {
-		width: 65%;
-	}
-	.p4clmn .prot_content_inner h2 a {
-		font-size: 20px;
-	}
-	.p4clmn .prot_content_inner h2{
-		margin:0;
-	}
-	.em_plus_port {
-		bottom: 10px;
-		right: 20px;
-	}
-	.p4clmn .single_protfolio:hover .prot_content_inner {
-		left: 55%;
-	}
-	.port4clmn .prot_content_inner h2 {
-		font-size: 17px;
-	}
-	.port4clmn .ttin p {
-		width: 67%;
-	}
-	h2.ptfcolor a {
-		font-size: 20px;
-	}
-	.finasol-single-icon a {
-		margin: 0 5px 0 0;
-	}
-	.ps3.ps1 .witr_content_pslide_text {
-		padding: 20px 10px 20px 10px;
-	}
-	/* tab area css */
-	.tab_inner .witrlistw.all_list_color {
-		margin: 0px -2px 0 0;
-	}
-	/* test area css */
-	.tstitle {
-		font-size: 20px;
-	}
-	.tsimg-mr25 {
-		margin-right: 20px;
-	}
-	.cn_test_area .slick-dots {
-		left: 400px;
-	}
-	/* contact area css */
-	.apartment_text h2 {
-		font-size: 30px;
-	}
-	.faq_con {
-		padding: 30px 0 0;
-	}
-	/* faq area css */
-	.faq_left {
-		padding: 20px 0 0;
-	}
-	.widget_recent_data .recent-post-image img {
-		width: 70px;
-	}
+p.desc-one {
+    width: 100%;
+}
+p.desc-tow {
+    width: 70%;
+}
+.about-thumb {
+    left: -47px;
+}
+.about-thumb img {
+    width: 100%;
+}
+.about-skill {
+    right: -1px;
+    bottom: -44px;
+}
+.single-service-box {;
+    padding: 40px 10px 38px;;
+}
+.service-content h4 {
+    font-size: 18px;
+}
+.skill-section p.desc-one {
+    width: 90%;
+}
+.skill2 .skill-count2 {
+    right: -112px;
+}
+.skill1 .skill-count1 {
+    right: -67px;
+}
+.working-process-box {
+    padding: 0 0 0;
+}
+.project-content {
+    padding: 10px 14px 40px;
+}
+.single-testimonial-thumb img {
+    width: 100%;
+    position: relative;
+    left: -19px;
+}
+.testi-help-button {
+    left: -19px;
+    width: 90%;
+}
+.testi-help-button i {
+    left: 26px;
+}
+.testi-desc p {
+    width: 100%;
+
+}
+.blog-content h4 a {
+    font-size: 20px;
+    line-height: 28px;
+}
+.footer-widget-desc p {
+    width: 90%;
+}
+
+
+
+/*Service Detials
+    =====================*/
+
+.service-details:before {
+    width: 30%;
+}
+.widget-sidebar-box {
+    padding: 30px 20px 30px;
+}
+
+ul.sidebar-menu li {
+    padding: 13px 4px 13px;
+}
+ul.sidebar-menu li a i {
+    margin-right: -1px;
+}
+
+ul.sidebar-menu li a {
+    font-size: 12px;
+}
+
+ul.sidebar-menu li a i {
+    font-size: 15px;
+}
+
+img.sidbr-icn {
+    padding-right: 6px;
+}
+
+ul.sidebar-menu2 li {
+    font-size: 13px;
+}
+
+h3.widget-title2 {
+    font-size: 22px;
+}
+
+h5.sidebar-title:before {
+    right: 135px;
+    width: 65px;
+}
+
+h5.sidebar-title:after {
+    left: 135px;
+    width: 65px;
+}
+
+h5.sidebar-title2 {
+    font-size: 22px;
+}
+
+.widget-download-box ul li a {
+    padding: 9px 7px;
+    font-size: 12px;
+}
+.widget-download-box ul li i {
+    font-size: 13px;
+    margin-right: 2px;
+}
+.widget-button a {
+    padding: 11px 32px;
+    font-size: 14px;
+}
+
+.service-dtls-all-items {
+    padding-left: 40px;
+}
+.service-thumb2 img {
+    width: 100%;
+}
+.service-dtls-cont h3 {
+    font-size: 26px;
+    line-height: 37px;
+}
+
+.sevice-dtls-content {
+    padding-left: 15px;
+}
+
+.sevice-dtls-content h4 {
+    font-size: 16px;
+}
+
+.sevice-dtls-content p {
+    font-size: 14px;
+}
+.service-dtls-items ul li {
+    font-size: 14px;
+}
+
+
+
+
+/*inner-pages-responsive-css--*/
+.portfolio-details-thumb img {
+    width: 100%;
+}
+.project-category {
+    margin-left: 12px;
+}
+.our-client {
+    margin-right: 15px;
+}
+.project-list-iteam ul li {
+    font-size: 15px;
+}
+/*faqs-section*/
+.accordion li a {
+    font-size: 14px;
+    padding: 14px 20px 14px 13px;
+}
+.accordion li p {
+    padding: 25px 10px 25px 15px;
+    text-align: justify;
+    font-size: 14px;
+}
+/*shope-details*/
+.widget-check-box {
+    padding: 40px 11px 18px;
+}
+.widget-check {
+    font-size: 14px;
+}
+.single-products-box:hover .product-thumb-icon a:nth-child(1) {
+    left: 101px;
+}
+.product-categories-box {
+    padding: 30px 14px 20px;
+
+}
+.categories-title h4 {
+    font-size: 16px;
+}
+.product-thumb {
+    padding-right: 5px;
+}
+.product-icon-list ul li {
+    font-size: 12px;
+}
+
+.products-title h6 {
+    font-size: 13px;
+}
+.categories-title h4::before {
+    left: -16px;
+}
+/*blog-details*/
+.row.blogs-pr {
+    padding-right: 42px;
+}
+.blogs-section h2.blog-title a {
+    font-size: 20px;
+}
+p.blog-desc2 {
+    text-align: justify;
+    margin-bottom: 13px;
+}
+.blog-quote p {
+    font-size: 16px;
+}
+.blog-dtls-thumb img {
+    width: 100%;
+}
+.post-comment-thumb {
+    margin-right: 20px;
+    margin-top: 27px;
+}
+
+.blog-post-comment span.rights-reply {
+    top: -99px;
+}
+.blog-post-comment .post-comment2 {
+    margin-left: 5px;
+}
+
+/*contact-section*/
+.contact-infor-content h4 {
+    font-size: 18px;
+}
+.contact-infor-content p {
+    font-size: 12px;
+    line-height: 23px;
+}
+
+
+
 
 
 }
-/* ------------------------------------------------- Tablet Screen : 768 ---------------------------------------------------*/
- @media (min-width: 768px) and (max-width: 991px) {
-	.mobile_logo_area {
-		padding: 20px 0;
-	}
-	.ssttwo {
-		font-size: 50px;
-	}
-	.sstthree {
-		font-size: 55px;
-	}
-	.sstone {
-		font-size: 22px;
-	}
-	.txbdsinner p {
-		width: 78%;
-	}
-	.txbdsinner {
-		height: 600px;
-		width: 93.29%;
-	}
-	.ttin h2 {
-		font-size: 28px !important;
-	}
-	.ttin h3 {
-		font-size:28px !important;
-	}
-	.top-address p span, .top-address p a {
-		margin-right: 5px;
-		font-size: 14px;
-	}
-	.top-address.em-login.text-right.text_s_center.text_m_center {
-		text-align: center;
-	}
-	.brpt.brptsize .brcrumb_title {
-		font-size: 30px;
-	}
-	.creative_header_address {
-		padding-left: 0;
-	}
-	.creative_header_button {
-		padding-left: 0;
-	}
-	.dtbtn{
-		font-size: 15px;
-		padding: 14.5px 29px;
-	}
-	.finasol-header-top .justify-content-between {
-		justify-content: space-around;
-	}
-	/* slider css */
-	.swttwo {
-		font-size: 50px;
-	}
-	.swtthree {
-		font-size: 50px;
-	}
-	/* feature area css */
-	.fn_fea_area {
-		padding: 80px 0 0;
-	}
-	/* about area css */
-	.ab_witr_con {
-		padding: 0;
-	}
-	/* contact area css */
-	.cont_witr {
-		padding: 70px 20px 80px 30px;
-	}
-	.twr_form_box textarea {
-		height: 200px;
-	}
-	.apartment_text h2 {
-		font-size: 24px;
-	}
-	/* team area css */
-	.team_inner .sttwo {
-		font-size: 20px !important;
-	}
-	.witr_siconw ul li a {
-		padding: 7px 5px 5px 10px;
-	}
-	/* blog area css */
-	.metashowcp {
-		overflow: inherit;
-		padding-left: 0;
-		width: 100%;
-	}
-	.witr_carousel_main > div:nth-child(even) .metashowcp {
-		padding-right: 0;
-		padding-left: 0px;
-	}
-	.wblogpart {
-		display: inherit;
-	}
-	.wblogthumb {
-		width: 100%;
-	}
-	.all_pslides_color p {
-		font-size: 20px;
-	}
-	.blog_left {
-		padding: 85px 40px 70px 30px;
-		margin: 0 0 50px 0;
-	}
-	.blog_witr {
-		padding-left: 15px;
-	}
-	.blog-left-side>div {
-		padding: 15px 15px 35px;
-	}
-	.recent-post-text {
-		padding-left: 0;
-	}
-	.recent-post-text h4 a {
-		font-size: 15px;
-	}
-	/* video area css */
-	.witr_all_color_v h2 {
-		font-size: 40px;
-	}
-	/* faq area css */
-	.faq_inner {
-		padding: 10px 0 107px 15px;
-		margin: 0;
-	}
-	.faq_witr {
-		margin: 0 0 0 30px;
-	}
-	.faq_con {
-		padding: 0;
-	}
-	.faq_left {
-		padding: 0;
-	}
-	/* skill area css */
-	.skil_witr {
-		padding: 35px 0 0 0;
-	}
-	/* call area css */
-	.chos_item1 {
-		border-width: 0 0px 1px 0;
-	}
-	.chos_witr {
-		padding: 0px 30px 0 25px;
-	}
-	/* portfolio area css */
-	.positi_3.pprotfolio4 {
-		padding: 8px 10px 10px;
-	}
-	.port_area .ttin p {
-		width: 85%;
-	}
-	.proj_mrt{
-		margin-top: 0;
-	}
-	.witr_pslide4.ps3.ps1 .witr_content_pslide_text {
-		padding: 16px 10px 15px 10px;
-		left: 10px;
-		right: 10px;
-	}
-	h2.ptfcolor a {
-		font-size: 20px;
-	}
-	.ps3 .witr_content_pslide_text h2 a {
-		font-size: 21px;
-	}
-	/* single ser css */
-	.witr_txwidgetin h2 {
-		font-size: 23px;
-	}
-	.ser2_inner .allcostyle {
-		padding: 15px 10px;
-	}
-	.ser2_inner .txstcolor a {
-		font-size: 24px;
-	}
-	.ser2_inner .iconalltf i {
-		font-size: 32px;
-		margin-right: 5px;
-	}
-	/* tab area css */
-	.tab_inner .witrlistw.all_list_color {
-		margin: 24px -2px 20px 0;
-	}
-	/* test area css */
-	.alltesicl p {
-		font-size: 16px;
-	}
-	
-	
-	
-}
-/* ------------------------------------------------- Small Mobile : 320 ---------------------------------------------------*/
- @media (max-width: 767px) {
-	.finasol_nav_area.prefix, .hbg2 {
-		display: none;
-	}
-	ol {
-		padding-left: 10px;
-	}	
-	.finasol_header_top_two.top_cr_style1.top_crt_style {
-		display: none;
-	}
-	.mobile_logo_area {
-		padding: 10px 0;
-	}
-	.top-address{
-		text-align: center;
-	}
-	.creative_header_button {
-		padding-left: 0;
-		text-align: center;
-	}
-	.single_header_address {
-		margin-bottom:10px;
-	}
-	.finasol-header-top .d-flex {
-		justify-content: center !important;
-	}
-	.breadcumb-area, .breadcumb-blog-area {
-		padding-top: 60px;
-		padding-bottom: 60px;
-	}
-	.finasol-header-top, .top-right-menu ul .sub-menu {
-		background-position: inherit;
-		background-size: cover;
-	}
-	.top-right-menu .social-icons {
-		justify-content:center;
-	}
-	.finasol-header-top {
-		padding-right: 0;
-		padding-left: 0;
-	}
-	/* slider area css */
-	.ssttwo {
-		font-size: 30px;
-	}
-	.sstone {
-		font-size:18px;
-	}
-	.txbdsinner.allleft {
-		text-align: center;
-	}
-	.fn_slider_area .btnallt {
-		margin-top: 25px;
-	}
-	/* single blog */
-	.hackery-single-blog-details-inner {
-		padding: 38px 20px 45px;
-	}
-	.finasol-single-blog-details-inner {
-		padding: 38px 25px 45px;
-	}
-	.block .wp-block-quote.is-large p, .block .wp-block-quote.is-style-large p {
-		font-size: 18px;
-	}
-	.blog-left-side>div {
-		padding: 30px 15px 30px;
-	}
-	.single-widget-item {
-		padding: 35px 0 0 15px;
-	}
-	/* call area css */
-	.cal_left_img {
-		text-align: center;
-		margin-bottom: 15px;
-	}
-    /* footer bar */
-	.footer_s_inner {
-		display: inherit;
-		text-align: center;
-	}
-	.finasol-single-icon a {
-		margin: 0 4px 0 0;
-	}
-     .footer-top-inner p {
-         width: 100%;
-    }
-     .footer-menu ul {
-         margin: 10px 0 0;
-         text-align: center !important;
-    }
-     .footer-menu ul li a {
-         font-size: 14px;
-    }
-     .copy-right-text p {
-         text-align: center;
-    }
-     .footer-bottom:before {
-         width: 100%;
-    }
-     .breadcumb-blog-area {
-         padding: 50px 0;
-    }
-    /* blog css */
-     .em-blog-content-area {
-         padding: 20px 10px 5px;
-    }
-     .finasol-blog-meta-left a, .finasol-blog-meta-left span {
-         font-size: 14px;
-         margin-right: 3px;
-    }
-     .finasol-blog-meta-right a, .finasol-blog-meta-right span {
-         font-size: 11px;
-         margin-left: 3px;
-    }
-     .witr_ablog_content h2 a{
-         font-size: 18px;
-    }
-	.recent-post-text {
-		padding-left: 0;
-	}
-    /* single blog */
-	.finasol-single-blog-details-inner {
-		padding: 38px 30px 45px;
-	}
-	.finasol-single-icon-inner a {
-		margin-bottom: 5px;
-	}
-	.post_reply ul, .blog-content ul, .single-blog-content ul {
-         padding-left: 20px;
-    }
-     .post_reply ol, .blog-content ol, .single-blog-content ol {
-         padding-left: 20px;
-    }
-     .comments-area .children {
-         margin-left: 10px;
-    }
-     .comment_field .input-field {
-         width: 100%;
-    }
-     .pdsr {
-         padding-top: 50px;
-    }
-     #wp-calendar {
-         display: block;
-    }
-	.blog_left {
-		padding: 85px 15px 70px 30px;
-	}
-	.blog_witr {
-		padding-left: 15px;
-		padding-right: 15px;
-	}
-    /* footer css */
-	.finasol_theme_widget p {
-		padding-right: 0;
-	}
-	.finasol_f_color.finasol_theme_widget > div {
-		text-align: center;
-	}
-	.ft_tpmrb.tts.text-left {
-		text-align: center;
-	}
-	.fot_inner .tts {
-		text-align: center;
-	}
-     .copy-right-text p {
-         font-size: 11px;
-    }
-     .footer-social-icon a i {
-         font-size: 16px;
-         height: 35px;
-         line-height: 35px;
-         width: 35px;
-    }
-    /* footer css */
-     .copy-right-text p {
-         font-size: 15px;
-    }
-     .finasol-blog-thumb img {
-         width: 100%;
-    }
-	/* menu list css */
-	.menu_list_inner {
-	 display: inherit;
-	}
-     .mobil-item {
-         margin-top: 30px;
-    }
-	.ttin p {
-		width: 100% !important;
-	}
-	.ttit {
-		margin: 0 0 -290px 0;
-	}
-	/* slider area css */
-	.allleft .txbdstitle {
-		width: 100%;
-		margin-top: 0;
-	}
-	.margin_left90 {
-		margin-left: 0;
-	}
-	.txbdscontent h2 {
-		margin-bottom: 0;
-	}
-	.txbdscontent p {
-		font-size: 16px;
-	}
-	.txbdsinner {
-		width:95%;
-	}
-	.txbdsinner {
-		height: 600px;
-	}
-	.txbdscontent h3 {
-		line-height: 38px;
-		font-size: 20px;
-	}
-	.txbdslider .allcostyle {
-		margin: 0;
-		padding: 0;
-		margin-bottom: 0;
-	}
-	.txbdsinner p {
-		width: 100%;
-	}
-	.ttin .txbdstitle {
-		font-size: 21px;
-	}
-	.ttin .txbdstitle.tsmall {
-		font-size: 16px;
-	}
-	.witr_shape_item_inner {
-		display: none;
-	}
-	/* about area css */
-	.txbdsvflex {
-		display: inherit;
-	}
-	.ab_witr_inn {
-		margin-top: 20px;
-	}
-	/* faq area css */
-	.faq_left {
-		margin-bottom: 30px;
-	}
-	/* team area css */
-	.team_left {
-		padding: 0;
-	}
-	/* pricing plan css */
-	.witri_texti_list ul li {
-		padding: 0 0 0 15px;
-	}
-	.tprtit {
-		font-size: 17px;
-	}
-	.tpr_cua .tpr_curn {
-		font-size: 27px;
-	}
-	/* contact area css */
-	.map_inner_area iframe {
-		height: 440px;
-	}
-	.twr_form_box textarea {
-		height: 200px;
-	}
-	.apartment_text h2 {
-		font-size: 23px;
-	}
-	/* testimonial area css */
-	.tstitle {
-		font-size: 20px;
-	}
-	.alltesicl p {
-		font-size: 17px;
-	}
-	.alltesicl {
-		padding: 40px 25px 40px 25px;
-	}
-	/* video area css */
-	.vd_con_inner {
-		margin-top: -430px;
-		padding: 30px 30px 30px;
-	}
-	/* skill area css */
-	.skil_left img {
-		margin-top: 30px;
-	}
-	.skil_witr {
-		padding: 30px 0 0 0;
-	}
-	.ser2_inner .allcostyle {
-		padding: 8px;
-		text-align: center;
-	}
-	.ser2_inner .txstcolor a {
-		font-size: 25px;
-	}
-	/* portfolio css */
-	.positi_3.pprotfolio4 {
-		padding: 8px 10px 10px;
-	}
-	.witr_content_pslide_text h2 {
-		margin: 0 0 10px;
-	}
-	.brpt.brptsize .brcrumb_title {
-		font-size: 23px;
-	}
-	.ps1 .witr_content_pslide_text {
-		left: 20px;
-		right: 20px;
-	}
-	.ps3.ps1 .witr_content_pslide_text {
-		padding: 20px 30px 20px 30px;
-	}
-	.slick-prev, .slick-next {
-		display: none !important;
-	}
-	h2.ptfcolor a {
-		font-size: 20px;
-	}
-	/* team area css */
-	.team_inner {
-		text-align: center;
-	}
-	.team_inner img {
-		float: inherit;
-		margin-right: 0;
-		margin-bottom: 10px;
-	}
-	.team_inner .ttin{
-		text-align: center;
-	}
-	/* choose area css */
-	.chos_witr {
-		padding: 90px 15px 0 15px;
-	}
-	.chos_item1 {
-		border-width: 0 0 1px 0;
-	}
-	/* marquee area css */
-	.txmartext .txmartex a, .txmartext .txmartex {
-		font-size: 50px;
-	}
-	/* footer area css */
-	.foter_top_inn .allcostyle {
-		padding: 0 0 20px 0;
-	}
-	.foter_top_inn .txbdsvflex {
-		display: inherit;
-		text-align: center;
-	}
-	.foter_top_inn .iconalltf i {
-		margin-bottom: 10px;
-	}
-	.witr_siconw {
-		margin-top: 15px;
-	}
-	.finasol-description-area {
-		text-align: center;
-	}
-	.widget_text h2{
-		text-align:center;
-	}
-	.finasol_theme_widget .widget h2 {
-		margin-top: 20px;
-		margin-bottom: 30px;
-	}
-	.recent-post-item {
-		display: inherit;
-	}
-	.widget_recent_data .recent-post-image img {
-		margin-bottom: 10px;
-	}
-	/* video area css */
-	.witr_all_color_v h2 {
-		font-size:0;
-	}
-	/* area css */
-	.witr_shor_posi {
-		bottom: 0;
-	}
-	.witr_shortcode_inner {
-		padding: 42px 15px 50px;
-		margin-bottom: 100px;
-	}
-	.shortcode_content {
-		font-size: 24px;
-	}
-	.mc4wp-form-fields input {
-		width: 100%;
-	}
-	/* blog area css */
-	.wblogpart {
-		display: inherit;
-	}
-	.wblogthumb{
-		width: 100%;
-	}
-	.metashowcp{
-		padding: 15px 15px 24px;
-		padding-left: 5px;
-		width: 100%;
-	}
-	.witr_carousel_main > div:nth-child(even) .metashowcp {
-		padding-right:0;
-		padding-left:0;
-	}
-	/* counter area css */
-	.witr_counter_icon {
-		float: inherit;
-		margin-bottom: 15px;
-	}
 
 
-	
+/* Tablet desktop :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+.top-header {
+    display: none;
 }
-/* ------------------------------------------------- Large Mobile :480px. ---------------------------------------------------*/
- @media only screen and (min-width: 480px) and (max-width: 767px) {
-     .em-slider-button {
-         display: block;
-    }
-     .em-nivo-slider-wrapper .nivo-directionNav {
-         display: block;
-    }
-     .em-button-button-area a {
-         margin-right: 5px;
-         margin-top: 15px;
-         padding: 3px 20px;
-         font-size: 12px;
-    }
-	.slider_btn .witr_btn.active {
-		margin-left: 15px;
-	}
-	/* faq area2 css */
-	.accordion_area2 .witr_ac_style {
-		margin-left: 20px;
-	}
-    /*=========== banner area 2 css ===============*/
-     .banner-content button {
-         position: absolute;
-    }
-    /* portfolio css */
-     .portfolio_nav ul li {
-         margin: 0 2px 10px;
-    }
-    /* banner area css */
-     .witr_banner_area {
-         height: 600px;
-    }
-     .witr_banner_content.text-right p {
-         width: 92%;
-         margin:auto;
-         font-size:17px;
-    }
-     .witr_banner_content.text-left p {
-         width: 92%;
-         margin:auto;
-         font-size:17px;
-    }
-    /* section_title */
-     .witr_section_title_inner h1, .witr_section_title_inner h2, .witr_section_title_inner h3 {
-         font-size: 25px;
-    }
-     .witr_section_title_inner.text-center p, .witr_section_title_inner.text-left p, .witr_section_title_inner.text-right p {
-         width: 91%;
-    }
-    /* text_widget css */
-     .witr_text_widget_inner p, .about-content span{
-         font-size: 14px !important;
-    }
-    /* blog css */
-     .blog-part {
-         text-align: center;
-    }
-    /* Screenshots css */
-     .dnSlide-main.done {
-         transform: scale(0.7);
-         margin-left: -196px;
-    }
-     .Screenshots-fearm img {
-         width: 256% !important;
-         max-width: 256% !important;
-         left: -98px;
-         top: 49px;
-    }
-    .finasol-header-top {
-		display: block;
-		text-align: center;
-	}
-	.top-right-menu {
-		text-align: center;
-	}
-
+.header-area {
+    display: none;
 }
-/* menu and logo show & hide */
- @media (min-width: 10px) and (max-width: 991px){
-     .mobile-menu{
-         display:block !important;
-    }
-     .mobile_logo_area{
-         display:block !important;
-    }
-     .finasol-main-menu{
-         display:none !important;
-    }
-     .d_md_none{
-         display:none !important;
-    }
-     .em-feature {
-         margin-bottom: 20px;
-    }
-     .single_counter {
-         margin-bottom: 20px;
-    }
+.hero-content h1 {
+    font-size: 50px;
+    line-height: 50px;
 }
- @media (min-width: 10px) and (max-width: 991px){
-     .text_m_right{
-         text-align:right !important;
-    }
-     .text_m_left{
-         text-align:right !important;
-    }
-     .menu_18.top-address p span {
-         font-size: 13px;
-    }
-     .footer-top-inner p {
-         width: 85%;
-    }
-     .witr_joined .witr_con_btn2 .w_btn2 {
-         position: inherit;
-         width: 100%;
-    }
+.hero-content h4::before {
+    left: 28%;
+}
+.hero-content h4::after {
+    right: 28%;
+}
+p.hero-desc {
+    width: 70%;
+}
+.single-feature-box {
+    padding: 18px 38px 28px;
+    margin-bottom: 24px;
+}
+.about-thumb {
+    margin-left: 0;
+}
+.about-thumb img {
+    width: 75%;
+    margin-bottom: 16px;
+}
+p.desc-tow {
+    width: 95%;
+}
+.single-service-box {
+    margin-bottom: 20px;
+}
+.skill-section {
+    background-position: center right;
+}
+.vedio-icon {
+    margin-bottom: 41px;
+}
+.working-process-section {
+    padding: 100px 0 55px;
+}
+.working-process-box {
+    padding: 0 17px 60px;
+}
+.project-content {
+    padding: 10px 24px 40px;
+}
+.blog-section {
+    padding: 100px 0 100px;
+}
+.single-blog-box {
+    margin-bottom: 21px;
+}
+.footer-widget-content {
+    margin-bottom: 40px;
+}
+.copyright-area {
+    margin-top: 50px;
 }
 
- @media (min-width: 570px) and (max-width: 767px){
-     .text_s_center{
-         text-align:center !important;
-    }
-     .text_s_right{
-         text-align:right !important;
-    }
-     .text_s_left{
-         text-align:right !important;
-    }
-     .footer-top-inner p {
-         width: 95%;
-    }
-}
- @media (min-width: 10px) and (max-width: 570px){
 
- 
- 
+
+
+
+/*Service Details
+    =====================*/
+
+.service-details:before {
+    width: 100%;
 }
- 
+
+.service-dtls-all-items {
+    padding-left: 0;
+}
+.service-thumb2 img {
+    width: 100%;
+}
+.service-dtls-box {
+    background: #fff;
+}
+
+.service-dtls-items {
+    margin-bottom: 30px;
+}
+
+.service-dtls-cont h3 {
+    font-size: 24px;
+}
+
+h2.accordion-title {
+    font-size: 24px;
+}
+
+  .portfolio-details-thumb img {
+    width: 100%;
+}  
+/*faqs-section*/
+p.center {
+    width: 90%;
+}
+
+.history-box.upper {
+    margin-top: 0;
+    padding: 0 0 0;
+}
+.history-content {
+    width: 90%;
+}
+/*blog-details*/
+.row.blogs-pr {
+    padding-right: 0;
+}
+.blogs-section h2.blog-title a {
+    font-size: 24px;
+}
+p.blog-desc2 {
+    padding: 15px 0 18px;
+    text-align: justify;
+}
+.blog-dtls-thumb img {
+    width: 100%;
+}
+.blog-post-comment .post-comment2 {
+    margin-left: 54px;
+}
+.post-comment-thumb {
+    margin-top: 30px;
+}
+.blog-post-comment span.rights-reply {
+    top: -93px;
+}
+/*contact-section*/
+.contact-information {
+    padding: 113px 0 110px;
+}
+.contact-infor-box {
+    margin-bottom: 20px;
+}
+.contact-thumb {
+    display: none;
+}
+.contact-form .form-box input {
+    width: 100%;
+}
+.contact-form .form-box textarea {
+    width: 100%;
+}
+/*counter-section*/
+.counter-section {
+    padding: 105px 0 70px;
+}
+.counter-box {
+    margin-bottom: 44px;
+}
+
+
+
+
+
+}
+
+/* Large Mobile :600px. */
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+
+.top-header {
+    display: none;
+}
+.header-area {
+    display: none;
+}
+.hero-content h1 {
+    font-size: 40px;
+    line-height: 40px;
+}
+.hero-content h4::before {
+    left: 20%;
+}
+.hero-content h4::after {
+    right: 20%;
+}
+p.hero-desc {
+    width: 90%;
+}
+.single-feature-box {
+    margin-bottom: 20px;
+}
+.about-thumb {
+    margin-left: 0;
+    margin-bottom: 20px;
+}
+.about-thumb img {
+    width: 100%;
+}
+.about-skill {
+    right: 14px;
+    bottom: 20px;
+}
+.section-title h1 {
+    font-size: 34px;
+    line-height: 35px;
+}
+p.desc-tow {
+    width: 90%;
+}
+.single-service-box {
+    margin-bottom: 20px;
+}
+.skill-section {
+    background-position: center right;
+}
+.skill1 .skill-count1 {
+    right: -84px;
+}
+.skill2 .skill-count2 {
+    right: -137px;
+}
+.vedio-icon {
+    margin-bottom: 29px;
+}
+.working-process-section {
+    padding: 100px 0 73px;
+}
+.working-process-box {
+    padding: 0 105px 0;
+    margin-bottom: 50px;
+}
+.single-testimonial-thumb img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.testi-help-button {
+    width: 85%;
+}
+.testi-desc p {
+    width: 98%;
+}
+.single-blog-box {
+    margin-bottom: 20px;
+}
+.footer-widget-content {
+    margin-top: 30px;
+}
+.footer-widget-desc p {
+    width: 83%;
+}
+
+
+
+
+
+.portfolio-details-thumb img {
+    width: 100%;
+}
+.our-client {
+    margin-right: 28px;
+}
+.project-category {
+    margin-left: 30px;
+}
+p.portfolio-details-desc {
+    text-align: justify;
+}
+/*service-details-section*/
+.service-dtls-all-items {
+    padding-left: 0;
+}
+.service-thumb2 img {
+    width: 100%;
+}
+p.service-dtls-desc2 {
+    text-align: justify;
+}
+.service-dtls-box {
+    margin-bottom: 22px;
+}
+.service-dtls-items {
+    margin-bottom: 20px;
+}
+/*faqs-section*/
+p.center {
+    width: 100%;
+}
+.accordion li a {
+    font-size: 14px;
+
+}
+.accordion li p {
+    font-size: 14px;
+    text-align: justify;
+}
+.history-box.upper {
+    margin-top: 0;
+    padding: 0 0 0;
+}
+.history-content {
+    width: 95%;
+}
+/*shope*/
+.row.products {
+    padding-left: 0;
+}
+/*shope-details*/
+.upper.widget_search {
+    margin-top: 40px;
+}
+.upper.widget_search input {
+    width: 89%;
+}
+.single-products-box:hover .product-thumb-icon a:nth-child(1) {
+    left: 35%;
+}
+.single-products-box:hover .product-thumb-icon a:nth-child(2) {
+    right: 40%;
+}
+/*blog-list*/
+a.blog-title-3 {
+    font-size: 28px;
+    line-height: 36px;
+}
+p.blog-desc-3 {
+    width: 98%;
+}
+/*blog-details*/
+.row.blogs-pr {
+    padding-right: 0;
+}
+.blogs-section h2.blog-title a {
+    font-size: 18px;
+}
+p.blog-desc2 {
+    padding: 15px 0 17px;
+    font-size: 15px;
+    text-align: justify;
+}
+.blog-quote {
+    padding: 24px 20px 43px;
+}
+.blog-quote p {
+    font-size: 14px;
+}
+.blog-dtls-thumb img {
+    width: 100%;
+}
+.blog-post-comment .post-comment2 {
+    margin-left: -7px;
+}
+.post-comment-thumb {
+    margin-right: 16px;
+    margin-top: 49px;
+}
+.blog-post-comment span.rights-reply {
+    top: -122px;
+}
+.sidebar-widget {
+    margin-top: 39px;
+}
+/*contact-section*/
+.contact-information {
+    padding: 113px 0 110px;
+}
+.contact-infor-box {
+    margin-bottom: 20px;
+}
+.contact-form .form-box input {
+    width: 100%;
+}
+.contact-form .form-box textarea {
+    width: 100%;
+}
+.contact-thumb {
+    display: none;
+}
+/*counter-section*/
+.counter-section {
+    padding: 105px 0 89px;
+}
+.counter-box {
+    margin-bottom: 30px;
+}
+
+
+
+
+
+
+
+
+
+}
+/* Large Mobile :480px. */
+@media only screen and (min-width: 480px) and (max-width:599px) {  
+.top-header {
+    display: none;
+}
+.header-area {
+    display: none;
+}
+.hero-section {
+    height: 640px;
+}
+.hero-content h4::before {
+    left: 16%;
+}
+.hero-content h4::after {
+    right: 16%;
+}
+.hero-content h1 {
+    font-size: 36px;
+    line-height: 36px;
+}
+p.hero-desc {
+    width: 100%;
+}
+.single-feature-box {
+    margin-bottom: 20px;
+}
+.about-thumb {
+    margin-left: 0;
+    margin-bottom: 26px;
+}
+.about-thumb img {
+    width: 100%;
+}
+.about-skill {
+    right: 0;
+    bottom: 0;
+}
+.section-title h1 {
+    font-size: 30px;
+    line-height: 30px;
+}
+p.desc-one {
+    width: 100%;
+}
+p.desc-tow {
+    width: 90%;
+}
+.single-service-box {
+    margin-bottom: 20px;
+}
+.service-section {
+    padding: 98px 0 106px;
+}
+.skill-section {
+    background-position: center right;
+}
+.vedio-icon {
+    margin-bottom: 30px;
+}
+.skill1 .skill-count1 {
+    right: -68px;
+}
+.skill2 .skill-count2 {
+    right: -114px;
+}
+.working-process-section {
+    padding: 100px 0 54px;
+}
+.working-process-box {
+    padding: 0 70px 0;
+    margin-bottom: 56px;
+}
+.single-testimonial-thumb img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.testi-help-button {
+    width: 84%;
+}
+.testi-help-button a {
+    font-size: 24px;
+}
+.testi-desc p {
+    width: 100%;
+}
+.single-blog-box {
+    margin-bottom: 20px;
+}
+.footer-widget-content {
+    margin-top: 36px;
+}
+
+
+.portfolio-details-thumb img {
+    width: 100%;
+}
+.our-client {
+    margin-right: 20px;
+}
+.project-category {
+    margin-left: 20px;
+}
+.project-list-iteam ul li {
+    font-size: 15px;
+}
+/*service-details*/
+.service-dtls-all-items {
+    padding-left: 0;
+}
+.service-thumb2 img {
+    width: 100%;
+}
+.service-dtls-box {
+    margin-bottom: 20px;
+}
+.service-dtls-items {
+    margin-bottom: 20px;
+}
+.accordion li p {
+    padding: 25px 20px 25px 18px;
+    text-align: justify;
+}
+/*faqs-section*/
+p.center {
+    width: 92%;
+}
+.accordion li a {
+    padding: 14px 20px 14px 13px;
+    font-size: 14px;
+}
+
+.history-box.upper {
+    margin-top: 0;
+    padding: 0 0 0;
+}
+.history-content {
+    width: 95%;
+    padding: 32px 27px 33px;
+    text-align: justify;
+}
+/*shope*/
+.row.products {
+    padding-left: 0;
+}
+.upper.widget_search {
+    text-align: left;
+    margin-top: 34px;
+}
+.upper.widget_search input {
+    width: 87%;
+}
+.single-products-box:hover .product-thumb-icon a:nth-child(1) {
+    left: 156px;
+}
+
+.single-products-box:hover .product-thumb-icon a:nth-child(2) {
+    right: 170px;
+}
+
+/*blog-list*/
+a.blog-title-3 {
+    font-size: 22px;
+    line-height: 30px;
+}
+/*blog-details*/
+.row.blogs-pr {
+    padding-right: 0;
+}
+.blogs-section h2.blog-title a {
+    font-size: 16px;
+}
+p.blog-desc2 {
+    padding: 0px 0 13px;
+    font-size: 15px;
+    text-align: justify;
+}
+.blog-desc3 {
+    font-size: 15px;
+    text-align: justify;
+}
+.blog-quote {
+    padding: 24px 12px 43px;
+}
+img.qte-icon {
+    margin-right: 12px;
+}
+.blog-quote p {
+    font-size: 13px;
+}
+.blog-dtls-thumb img {
+    width: 100%;
+}
+ul.product-list li {
+    font-size: 14px;
+}
+.blog-post-comment .post-comment {
+    text-align: center;
+}
+.post-comment-thumb {
+    float: inherit;
+    margin-right: 0;
+}
+.blog-post-comment h4.post-title span {
+    padding-left: 0;
+    display: inherit;
+}
+.blog-post-comment h4.post-title {
+    line-height: 30px;
+}
+.blog-post-comment span.rights-reply {
+    top: -115px;
+}
+p.posts-reply {
+    font-size: 16px;
+    text-align: justify;
+}
+
+.blog-post-comment .post-comment2 {
+    margin-left: 0;
+    text-align: center;
+}
+.sidebar-widget {
+    margin-top: 45px;
+}
+/*contact-section*/
+.contact-information {
+    padding: 113px 0 110px;
+}
+.contact-infor-box {
+    margin-bottom: 20px;
+}
+.contact-form .form-box input {
+    width: 100%;
+}
+.contact-form .form-box textarea {
+    width: 100%;
+}
+.contact-thumb {
+    display: none;
+}
+/*counter-section*/
+.counter-section {
+    padding: 105px 0 80px;
+}
+.counter-content {
+    margin-bottom: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+}
+
+/* small mobile :320px. */
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+
+.top-header {
+    display: none;
+}
+.header-area {
+    display: none;
+}
+.hero-section {
+    height: 580px;
+}
+.hero-content h4::before {
+   background: transparent;
+}
+.hero-content h4::after {
+      background: transparent;
+}
+.hero-content h1 {
+    font-size: 22px;
+    line-height: 26px;
+}
+p.hero-desc {
+    width: 100%;
+}
+.row.feature {
+    margin-top: 70px;
+}
+.single-feature-box {
+    padding: 18px 22px 28px;
+     margin-top: 20px;
+}
+.about-thumb {
+    margin-left: 0;
+    margin-bottom: 20px;
+}
+.about-thumb img {
+    width: 100%;
+}
+.about-skill {
+    right: -2px;
+    bottom: -12px;
+}
+.about-skill-content {
+    padding: 5px 41px 19px;
+}
+.section-title h1 {
+    font-size: 21px;
+    line-height: 22px;
+}
+p.desc-one {
+    width: 100%;
+}
+p.desc-tow {
+    width: 100%;
+}
+.about-content h4 {
+    font-size: 20px;
+}
+.about-content p {
+    width: 100%;
+    text-align: justify;
+}
+.service-section {
+    padding: 98px 0 104px;
+}
+.single-service-box {
+    margin-bottom: 20px;
+}
+.skill-section {
+    background-position: center right;;
+}
+.skill-section p.desc-one {
+    width: 100%;
+    text-align: justify;
+}
+.vedio-icon {
+    margin-bottom: 44px;
+}
+.skill1 .skill-count1 {
+    right: -42px;
+}
+.skill2 .skill-count2 {
+    right: -70px;
+}
+.working-process-box {
+    padding: 0 0 55px;
+}
+.working-process-section {
+    padding: 100px 0 68px;
+}
+.project-content {
+    padding: 10px 18px 40px;
+}
+.single-testimonial-thumb img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.testi-help-button a {
+    font-size: 18px;
+}
+.testi-help-button {
+    width: 95%;
+}
+.testi-help-button i {
+    left: 23px;
+}
+.testi-desc p {
+    width: 100%;
+}
+.single-blog-box {
+    margin-top: 20px;
+}
+.blog-content {
+    padding: 31px 30px 19px;
+}
+.blog-content h4 a {
+    font-size: 22px;
+}
+.footer-widget-desc p {
+    width: 100%;
+}
+.footer-widget-content {
+    margin-top: 25px;
+}
+.footer-widget-title {
+    margin-bottom: 10px;
+}
+.copyright-area p {
+    font-size: 14px;
+}
+
+
+.breadcumb-title h1 {
+    font-size: 26px;
+    margin-bottom: 0px;
+}
+.portfolio-details-thumb img {
+    width: 100%;
+}
+p.portfolio-details-desc {
+    text-align: justify;
+}
+h4.portfolio-details-title {
+    font-size: 22px;
+    width: 100%;
+}
+.project-category {
+    display: inherit;
+    margin-left: 0;
+    margin-top: 20px;
+}
+.our-client {
+    display: inherit;
+    margin-right: 0;
+    margin-bottom: 21px;
+}
+/*service-details*/
+.service-thumb2 img {
+    width: 100%;
+}
+.widget-download-box ul li a {
+    padding: 14px 25px;
+}
+.service-dtls-all-items {
+    padding-left: 0;
+    margin-top: 9px;
+}
+.sevice-dtls-content h4 {
+    font-size: 16px;
+}
+.sevice-dtls-content {
+    padding-left: 16px;
+}
+.service-dtls-box {
+    align-items: revert-layer;
+    margin-bottom: 20px;
+}
+.service-dtls-items {
+    margin-bottom: 15px;
+}
+.service-dtls-cont h3 {
+    font-size: 22px;
+}
+h2.accordion-title {
+    font-size: 20px;
+}
+.accordion li a {
+    font-size: 11px;
+    padding: 14px 0 14px 12px;
+}
+.accordion li p {
+    font-size: 15px;
+    padding: 25px 16px 25px 19px;
+    text-align: justify;
+}
+/*faqs-section*/
+p.center {
+    width: 100%;
+    font-size: 14px;
+}
+
+.history-box.upper {
+    margin-top: 0;
+    padding: 0 0 0;
+}
+.history-box.upper .history-content {
+    width: 100%;
+}
+.history-content {
+    margin-top: 1px;
+}
+.history-content {
+    padding: 32px 22px 33px;
+    margin-top: 1px;
+    font-size: 15px;
+    text-align: justify;
+    width: 100%;
+}
+/*shope*/
+.row.products {
+    padding-left: 0;
+}
+.upper.widget_search {
+    text-align: left;
+    margin-top: 37px;
+}
+
+/*shope-detials*/
+.products-details-content {
+    padding: 7px 21px 44px;
+}
+.chart-button a {
+    margin-top: 20px;
+}
+.upper.widget_search input {
+    width: 80%;
+}
+/*blog-list*/
+a.blog-title-3 {
+    font-size: 15px;
+    line-height: 20px;
+}
+.single-blog-box-3 {
+    padding: 25px;
+}
+p.blog-desc-3 {
+    width: 100%;
+    text-align: justify;
+    font-size: 15px;
+}
+/*blog-details*/
+.row.blogs-pr {
+    padding-right: 0;
+}
+.blogs-section .single-blog-dtls-box .blog-content {
+    padding: 35px 18px 25px;
+}
+ul.blog-author li {
+    margin-right: 8px;
+    font-size: 15px;
+}
+ul.blog-author li i {
+    margin-right: 3px;
+}
+ul.blog-author li {
+    margin-right: 9px;
+    font-size: 15px;
+}
+.blogs-section h2.blog-title a {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 26px;
+    display: inline-block;
+}
+p.blog-desc2 {
+    padding: 15px 0 26px;
+    font-size: 13px;
+    text-align: justify;
+}
+.blog-desc3 {
+    font-size: 13px;
+    text-align: justify;
+}
+.blog-quote {
+    padding: 24px 22px 43px;
+    text-align: center;
+}
+.blog-quote p {
+    font-size: 14px;;
+}
+img.qte-icon {
+    float: inherit;
+    margin-right: 0;
+    margin-bottom: 20px;
+}
+.blog-dtls-thumb img {
+    width: 100%;
+}
+ul.social-share {
+    float: left;
+    margin-top: 13px;
+}
+.blog-post-comment {
+    padding: 34px 18px 26px;
+}
+.blog-post-comment .post-comment {
+    text-align: center;
+}
+.post-comment-thumb {
+    float: inherit;
+    margin-right: 0;
+}
+.blog-post-comment h4.post-title {
+    line-height: 30px;
+}
+.blog-post-comment h4.post-title span {
+    padding-left: 0;
+    display: inherit;
+    padding-bottom: 7px;
+}
+p.posts-reply {
+    font-size: 14px;
+    text-align: justify;
+}
+.blog-post-comment span.rights-reply {
+    top: -181px;
+}
+.blog-post-comment .post-comment2 {
+    margin-left: 0;
+}
+h3.blog-comment-title {
+    font-size: 22px;
+    padding: 0 0 0;
+}
+.sidebar-widget {
+    margin-top: 41px;
+}
+/*contact-section*/
+.contact-information {
+    padding: 113px 0 110px;
+}
+.contact-infor-box {
+    margin-bottom: 20px;
+    padding: 39px 22px 24px;
+}
+.contact-infor-content p {
+    font-size: 13px;
+    line-height: 26px;
+}
+.contact-form-content p {
+    font-size: 16px;
+    padding: 4px 0 29px;
+}
+.contact-form .form-box input {
+    width: 100%;
+}
+.contact-form .form-box textarea {
+    width: 100%;
+}
+.contact-thumb {
+    display: none;
+}
+
+
+
+}
+
+
+
+

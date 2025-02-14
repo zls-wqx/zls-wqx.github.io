@@ -1,6 +1,6 @@
 /*!
 * jQuery meanMenu v2.0.8
-* @Copyright (C) 2012-2014 Chris Wharton @ MeanThemes (://github.com/meanthemes/meanMenu)
+* @Copyright (C) 2012-2014 Chris Wharton @ MeanThemes (https://github.com/meanthemes/meanMenu)
 *
 */
 /*
@@ -32,7 +32,7 @@
 						meanMenuContainer: '.mobile-menu-area .container', // Choose where meanmenu will be placed within the HTML
 						meanMenuClose: "X", // single character you want to represent the close menu button
 						meanMenuCloseSize: "18px", // set font size of close button
-						meanMenuOpen: "<span></span><span></span><span></span>", // text/markup you want when menu is closed
+						meanMenuOpen: "<span /><span /><span />", // text/markup you want when menu is closed
 						meanRevealPosition: "right", // left right or center positions
 						meanRevealPositionDistance: "0", // Tweak the position of the menu
 						meanRevealColour: "", // override CSS colours for the reveal background
@@ -282,4 +282,8 @@
 					showMeanMenu();
 				});
 		};
+		
+
+		
+		
 })(jQuery);

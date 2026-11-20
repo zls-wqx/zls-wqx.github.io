@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>服务已暂时关停 - X-GORB Studio</title>
+<meta name="description" content="X-GORB Studio 因持续遭受 DDoS 与 CC 攻击，站点服务已暂时关停，恢复时间待定，请留意官方交流群通知。">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#fcfcfa" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131312" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="logo.png" type="image/png">
+<style>
+:root{
+  --bg:#fcfcfa;
+  --paper:#fcfcfa;
+  --ink:#1d1d1b;
+  --ink-2:#4a4a45;
+  --muted:#76766f;
+  --line:#e3e2dc;
+  --line-strong:#cfceC7;
+  --accent:#a8321f;
+  --ok:#1f6b3a;
+  --mark:#f3efe4;
+  --font:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB",
+         "Microsoft YaHei","Noto Sans SC",sans-serif;
+  --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#131312;
+    --paper:#131312;
+    --ink:#e9e8e3;
+    --ink-2:#c2c1ba;
+    --muted:#8e8e86;
+    --line:#2c2c29;
+    --line-strong:#3a3a36;
+    --accent:#e0836f;
+    --ok:#7fbf95;
+    --mark:#1d1c19;
+  }
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--font);
+  font-size:16px;
+  line-height:1.95;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+
+.page{
+  max-width:720px;
+  margin:0 auto;
+  padding:44px 24px 56px;
+}
+
+/* ── 顶部 ── */
+.bar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  padding-bottom:18px;
+  border-bottom:1px solid var(--line-strong);
+}
+.bar img{height:30px;width:auto;display:block}
+@media (prefers-color-scheme: dark){.bar img{filter:brightness(1.15)}}
+.state{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  font-size:12.5px;
+  color:var(--muted);
+  letter-spacing:.01em;
+  white-space:nowrap;
+}
+.state .dot{
+  width:6px;height:6px;border-radius:50%;
+  background:var(--accent);
+  flex:none;
+}
+
+/* ── 停服横幅（在“官方公告”之上） ── */
+.halt{
+  margin:30px 0 0;
+  padding:1px 0 1px 20px;
+  border-left:2px solid var(--accent);
+}
+.halt-label{
+  font-size:11.5px;
+  letter-spacing:.16em;
+  color:var(--accent);
+  margin-bottom:7px;
+}
+.halt-title{
+  font-size:20px;
+  font-weight:600;
+  line-height:1.55;
+  letter-spacing:.01em;
+  color:var(--ink);
+}
+.halt-desc{
+  margin-top:8px;
+  font-size:14.5px;
+  line-height:1.85;
+  color:var(--ink-2);
+  max-width:58ch;
+}
+.halt-desc strong{color:var(--ink);font-weight:600}
+.halt-desc a{
+  color:var(--ink);
+  text-decoration:underline;
+  text-decoration-thickness:1px;
+  text-decoration-color:color-mix(in srgb,var(--ink) 45%,transparent);
+  text-underline-offset:3px;
+}
+.halt-desc a:hover{text-decoration-color:currentColor}
+
+/* ── 标题区 ── */
+.head{padding:26px 0 26px}
+.head h1{
+  font-size:21px;
+  font-weight:600;
+  letter-spacing:.14em;
+  line-height:1.5;
+}
+.head p{
+  margin-top:8px;
+  font-size:13px;
+  color:var(--muted);
+  letter-spacing:.02em;
+}
+
+/* ── 公告 ── */
+.notice{padding:30px 0 34px;border-top:1px solid var(--line)}
+.notice:first-of-type{border-top:0;padding-top:0}
+
+.meta{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:12.5px;
+  color:var(--muted);
+  margin-bottom:14px;
+  font-variant-numeric:tabular-nums;
+}
+.meta time{letter-spacing:.02em}
+.meta .tag{
+  font-size:11px;
+  line-height:1.6;
+  padding:0 6px;
+  border:1px solid currentColor;
+  border-radius:2px;
+  letter-spacing:.04em;
+}
+.meta .tag.live{color:var(--accent)}
+.meta .tag.done{color:var(--ok)}
+
+.notice h2{
+  font-size:18px;
+  line-height:1.72;
+  font-weight:600;
+  letter-spacing:.005em;
+  margin-bottom:16px;
+  text-wrap:pretty;
+}
+.notice p{
+  color:var(--ink-2);
+  margin-bottom:14px;
+  text-wrap:pretty;
+}
+.notice p:last-child{margin-bottom:0}
+.notice p.salutation{color:var(--ink);margin-bottom:12px}
+.notice p.body{text-indent:2em}
+.notice em{font-style:normal;font-weight:600;color:var(--ink)}
+
+.sign{
+  margin-top:18px;
+  text-align:right;
+  font-size:14px;
+  color:var(--ink-2);
+  line-height:1.85;
+}
+.sign .org{color:var(--ink);font-weight:500}
+
+/* ── 反馈 ── */
+.feedback{
+  margin-top:6px;
+  padding-top:26px;
+  border-top:1px solid var(--line-strong);
+}
+.feedback h3{
+  font-size:13px;
+  font-weight:600;
+  letter-spacing:.12em;
+  color:var(--muted);
+  margin-bottom:10px;
+}
+.feedback p{font-size:14.5px;color:var(--ink-2);margin-bottom:4px}
+.feedback a{
+  color:var(--ink);
+  font-weight:500;
+  text-decoration:underline;
+  text-decoration-thickness:1px;
+  text-decoration-color:color-mix(in srgb,var(--ink) 45%,transparent);
+  text-underline-offset:3px;
+  white-space:nowrap;
+  transition:text-decoration-color .18s ease;
+}
+.feedback a:hover{text-decoration-color:currentColor}
+
+/* ── 页脚 ── */
+.foot{
+  margin-top:34px;
+  padding-top:16px;
+  border-top:1px solid var(--line);
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  gap:6px 18px;
+  font-size:12.5px;
+  color:var(--muted);
+}
+.foot a{
+  color:var(--muted);
+  text-decoration:none;
+  border-bottom:1px solid transparent;
+}
+.foot a:hover{color:var(--ink-2);border-bottom-color:var(--line-strong)}
+
+/* ── 窄屏 ── */
+@media (max-width:560px){
+  .page{padding:26px 18px 40px}
+  body{font-size:15.5px;line-height:1.9}
+  .bar{padding-bottom:14px}
+  .bar img{height:24px}
+  .state{font-size:11.5px}
+  .halt{margin-top:24px;padding-left:16px}
+  .halt-title{font-size:18px}
+  .halt-desc{font-size:14px}
+  .head{padding:22px 0 20px}
+  .head h1{font-size:19px;letter-spacing:.1em}
+  .notice{padding:26px 0 28px}
+  .notice h2{font-size:16.5px;line-height:1.7}
+  .meta{flex-wrap:wrap;gap:6px 8px}
+  .sign{font-size:13.5px}
+  .foot{flex-direction:column;gap:4px}
+}
+
+@media print{
+  body{background:#fff}
+  .page{max-width:none;padding:0}
+  .feedback,.foot{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="bar">
+    <img src="logo.png" alt="X-GORB" width="104" height="26">
+    <span class="state"><span class="dot" aria-hidden="true"></span>站点已暂时关停</span>
+  </header>
+
+  <section class="halt" role="status">
+    <p class="halt-label">当前状态</p>
+    <p class="halt-title">服务已暂时关停</p>
+    <p class="halt-desc">
+      因持续遭受 DDoS 与 CC 攻击，为保障用户数据与服务安全，站点已暂时关停，<strong>恢复时间待定</strong>。恢复后将在<a href="https://qm.qq.com/q/XCZwI32nSK" target="_blank" rel="noopener noreferrer">官方交流群</a>第一时间通知。
+    </p>
+  </section>
+
+  <div class="head">
+    <h1>官方公告</h1>
+    <p>X-GORB Studio · 服务事件通报</p>
+  </div>
+
+  <article class="notice">
+    <div class="meta">
+      <time datetime="2026-11-20T12:36+08:00">2026-11-20 12:36</time>
+      <span class="tag live">已关停</span>
+    </div>
+
+    <h2>关于站点暂时关停的公告</h2>
+
+    <p class="salutation">各位同僚、各位朋友：</p>
+
+    <p class="body">
+      因攻击仍在持续，为控制影响范围、保障用户数据与服务安全，我们已<em>暂时关停站点服务</em>。关停期间站点无法正常访问，恢复时间待定。
+    </p>
+
+    <p class="body">
+      恢复后我们会在官方交流群第一时间发布通知，请留意群消息。由此带来的不便，敬请谅解。
+    </p>
+
+    <div class="sign">
+      <div class="org">X-GORB Studio 官方团队</div>
+      <div>2026 年 11 月 20 日</div>
+    </div>
+  </article>
+
+  <article class="notice">
+    <div class="meta">
+      <time datetime="2026-11-18T23:34+08:00">2026-11-18 23:34</time>
+    </div>
+
+    <h2>持续遭受 DDoS 与 CC 穿透攻击，OAuth 登录、搜索等核心服务间歇性受影响</h2>
+
+    <p class="salutation">各位同僚、各位朋友：</p>
+
+    <p class="body">
+      近段时间，我们持续遭受来源不明的恶意流量 DDoS 攻击以及 CC 穿透攻击，攻击持续时长已经达到三至四个月，造成 OAuth 登录、搜索等核心服务间歇性无法正常使用。我们团队一直在持续收集攻击者相关数据，全程优先保护用户隐私安全，不间断监控服务器运行状态，留存攻击日志，持续加固防护体系。
+    </p>
+
+    <p class="body">
+      目前我们仍在持续对抗攻击，尽力保障各项服务稳定可用。谢谢您的耐心等待与支持！
+    </p>
+
+    <div class="sign">
+      <div class="org">X-GORB Studio 官方团队</div>
+      <div>2026 年 11 月 18 日</div>
+    </div>
+  </article>
+
+  <article class="notice">
+    <div class="meta">
+      <time datetime="2026-11-08T12:16+08:00">2026-11-08 12:16</time>
+      <span class="tag done">已恢复</span>
+    </div>
+
+    <h2>网站均已恢复，用户系统数据无丢失</h2>
+
+    <p class="salutation">各位同僚、各位朋友：</p>
+
+    <p class="body">
+      网站均已恢复，数据部分丢失，仅网站 log 与部分测试功能小数据丢失。用户系统数据无丢失，欢迎继续使用！谢谢您的耐心等待和支持。
+    </p>
+
+    <div class="sign">
+      <div class="org">X-GORB Studio 官方团队</div>
+      <div>2026 年 11 月 8 日</div>
+    </div>
+  </article>
+
+  <section class="feedback">
+    <h3>反馈</h3>
+    <p>如发现 bug 或问题反馈，直通 CEO：<a href="mailto:xgorb-ceo@xgorb.cn">xgorb-ceo@xgorb.cn</a></p>
+    <p>官方交流群：<a href="https://qm.qq.com/q/XCZwI32nSK" target="_blank" rel="noopener noreferrer">1097250402（ZephyrTech官方交流群）</a></p>
+  </section>
+
+  <footer class="foot">
+    <span>© 2026 X-GORB Studio（ZephyrTech）</span>
+    <span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">陇ICP备2026006655号</a></span>
+  </footer>
+
+</div>
+</body>
+</html>
